@@ -379,11 +379,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedc8d87927490a4eacd247dac0ae5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
+  canSprint: 1
+  sprintSpeed: 6
   up: 119
   down: 115
   left: 97
   right: 100
+  sprint: 101
 --- !u!212 &822094549
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -709,10 +712,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6.25
+  canSprint: 0
+  sprintSpeed: 0
   up: 273
   down: 274
   left: 276
   right: 275
+  sprint: 0
 --- !u!1 &1964868544
 GameObject:
   m_ObjectHideFlags: 0
