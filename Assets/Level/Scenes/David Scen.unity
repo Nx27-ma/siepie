@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 822094548}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 1641254658}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedc8d87927490a4eacd247dac0ae5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6.25
+  moveSpeed: 4
   canSprint: 0
   sprintSpeed: 0
   up: 273
