@@ -6,10 +6,13 @@ public class Player_Movement: MonoBehaviour
 {
 
     public float moveSpeed;
-    public KeyCode up,down,left,right;
+    public bool canSprint;
+    public float sprintSpeed;
+    public KeyCode up,down,left,right,sprint;
+    
 
     
-    bool moveUp, moveDown, moveLeft, moveRight;
+    bool moveUp, moveDown, moveLeft, moveRight,sprinting;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,12 @@ public class Player_Movement: MonoBehaviour
         moveDown = Input.GetKey(down);
         moveLeft = Input.GetKey(left);
         moveRight = Input.GetKey(right);
+        sprinting = Input.GetKey(sprint);
 
+        if (canSprint && sprinting)
+        {
+            moveSpeed += sprintSpeed;
+        }
       
     }
 
