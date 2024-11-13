@@ -31,7 +31,11 @@ public class Player_Movement: MonoBehaviour
 
         if (canSprint && sprinting)
         {
-            moveSpeed += sprintSpeed;
+            moveSpeed = sprintSpeed;
+        }
+        else
+        {
+            moveSpeed = 3;
         }
       
     }
