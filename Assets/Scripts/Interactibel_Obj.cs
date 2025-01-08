@@ -5,19 +5,44 @@ using UnityEngine.Events;
 
 public class Interact1 : MonoBehaviour
 {
-    public string test;
-    public UnityEvent interacted;
-    // Start is called before the first frame update
+    public bool IsInRange; // Bool to know if player is in range
+
+    public string Tag; // Wich tag should be interacted 
     
 
-    public void Activate ()
+    public KeyCode InteractButton; 
+    public UnityEvent Interacted;
+
+  
+    // Start is called before the first frame update
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        interacted.Invoke();
+        if (collision.gameObject.CompareTag(Tag))
+        {
+            IsInRange = true;
+        }
     }
 
-    public void Test()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(test);
+        if (collision.gameObject.CompareTag(Tag))
+        {
+            IsInRange = false;
+        }
     }
+    public void Update()
+    {
+        if (IsInRange)
+        {
+            if (Input.GetKeyDown(InteractButton))
+            {
+                Interacted.Invoke();
+            }
+        }
+    }
+
+   
+
 
 }
