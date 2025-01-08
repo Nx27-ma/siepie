@@ -25,6 +25,5 @@ public class TaikiController : MonoBehaviour
     {
         Vector2 move = transform.up * moveValue.y * MoveSpeed + transform.right * moveValue.x * MoveSpeed;
         m_Rigidbody.velocity = move;
-        Debug.Log(m_Rigidbody.velocity);
     }
 }
