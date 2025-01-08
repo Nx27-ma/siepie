@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 295018525}
   m_Layer: 0
   m_Name: Interactibel
-  m_TagString: Interactibel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 997506469}
   m_Layer: 0
   m_Name: Interactibel (1)
-  m_TagString: Interactibel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,7 +7,6 @@ TagManager:
   - Human
   - Cat
   - Enemy
-  - Interactibel
   layers:
   - Default
   - TransparentFX
