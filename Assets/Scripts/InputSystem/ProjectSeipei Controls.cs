@@ -24,11 +24,11 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
     ""name"": ""ProjectSeipei Controls"",
     ""maps"": [
         {
-            ""name"": ""Takki"",
+            ""name"": ""Takkie"",
             ""id"": ""81c1ce0d-e58b-464f-a1f2-f29f6772e0cf"",
             ""actions"": [
                 {
-                    ""name"": ""TakkiMove"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""0109962d-4757-4668-955d-785f00c4fd99"",
                     ""expectedControlType"": ""Vector2"",
@@ -37,7 +37,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""TakkiInteract"",
+                    ""name"": ""TakkieInteract"",
                     ""type"": ""Button"",
                     ""id"": ""27c9d250-f8ac-4b54-a6fb-0519c768e567"",
                     ""expectedControlType"": """",
@@ -54,7 +54,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -65,7 +65,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -76,7 +76,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -87,7 +87,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -98,7 +98,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -109,7 +109,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -120,7 +120,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -131,7 +131,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -142,7 +142,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -153,7 +153,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -164,7 +164,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""XR"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -175,7 +175,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Joystick"",
-                    ""action"": ""TakkiMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -186,7 +186,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TakkiInteract"",
+                    ""action"": ""TakkieInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -875,10 +875,10 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
         }
     ]
 }");
-        // Takki
-        m_Takki = asset.FindActionMap("Takki", throwIfNotFound: true);
-        m_Takki_TakkiMove = m_Takki.FindAction("TakkiMove", throwIfNotFound: true);
-        m_Takki_TakkiInteract = m_Takki.FindAction("TakkiInteract", throwIfNotFound: true);
+        // Takkie
+        m_Takkie = asset.FindActionMap("Takkie", throwIfNotFound: true);
+        m_Takkie_Move = m_Takkie.FindAction("Move", throwIfNotFound: true);
+        m_Takkie_TakkieInteract = m_Takkie.FindAction("TakkieInteract", throwIfNotFound: true);
         // Seipie
         m_Seipie = asset.FindActionMap("Seipie", throwIfNotFound: true);
         m_Seipie_SeipieMove = m_Seipie.FindAction("SeipieMove", throwIfNotFound: true);
@@ -899,7 +899,7 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
 
     ~@PSIA()
     {
-        UnityEngine.Debug.Assert(!m_Takki.enabled, "This will cause a leak and performance issues, PSIA.Takki.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Takkie.enabled, "This will cause a leak and performance issues, PSIA.Takkie.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Seipie.enabled, "This will cause a leak and performance issues, PSIA.Seipie.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, PSIA.UI.Disable() has not been called.");
     }
@@ -960,59 +960,59 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Takki
-    private readonly InputActionMap m_Takki;
-    private List<ITakkiActions> m_TakkiActionsCallbackInterfaces = new List<ITakkiActions>();
-    private readonly InputAction m_Takki_TakkiMove;
-    private readonly InputAction m_Takki_TakkiInteract;
-    public struct TakkiActions
+    // Takkie
+    private readonly InputActionMap m_Takkie;
+    private List<ITakkieActions> m_TakkieActionsCallbackInterfaces = new List<ITakkieActions>();
+    private readonly InputAction m_Takkie_Move;
+    private readonly InputAction m_Takkie_TakkieInteract;
+    public struct TakkieActions
     {
         private @PSIA m_Wrapper;
-        public TakkiActions(@PSIA wrapper) { m_Wrapper = wrapper; }
-        public InputAction @TakkiMove => m_Wrapper.m_Takki_TakkiMove;
-        public InputAction @TakkiInteract => m_Wrapper.m_Takki_TakkiInteract;
-        public InputActionMap Get() { return m_Wrapper.m_Takki; }
+        public TakkieActions(@PSIA wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Takkie_Move;
+        public InputAction @TakkieInteract => m_Wrapper.m_Takkie_TakkieInteract;
+        public InputActionMap Get() { return m_Wrapper.m_Takkie; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(TakkiActions set) { return set.Get(); }
-        public void AddCallbacks(ITakkiActions instance)
+        public static implicit operator InputActionMap(TakkieActions set) { return set.Get(); }
+        public void AddCallbacks(ITakkieActions instance)
         {
-            if (instance == null || m_Wrapper.m_TakkiActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_TakkiActionsCallbackInterfaces.Add(instance);
-            @TakkiMove.started += instance.OnTakkiMove;
-            @TakkiMove.performed += instance.OnTakkiMove;
-            @TakkiMove.canceled += instance.OnTakkiMove;
-            @TakkiInteract.started += instance.OnTakkiInteract;
-            @TakkiInteract.performed += instance.OnTakkiInteract;
-            @TakkiInteract.canceled += instance.OnTakkiInteract;
+            if (instance == null || m_Wrapper.m_TakkieActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TakkieActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @TakkieInteract.started += instance.OnTakkieInteract;
+            @TakkieInteract.performed += instance.OnTakkieInteract;
+            @TakkieInteract.canceled += instance.OnTakkieInteract;
         }
 
-        private void UnregisterCallbacks(ITakkiActions instance)
+        private void UnregisterCallbacks(ITakkieActions instance)
         {
-            @TakkiMove.started -= instance.OnTakkiMove;
-            @TakkiMove.performed -= instance.OnTakkiMove;
-            @TakkiMove.canceled -= instance.OnTakkiMove;
-            @TakkiInteract.started -= instance.OnTakkiInteract;
-            @TakkiInteract.performed -= instance.OnTakkiInteract;
-            @TakkiInteract.canceled -= instance.OnTakkiInteract;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @TakkieInteract.started -= instance.OnTakkieInteract;
+            @TakkieInteract.performed -= instance.OnTakkieInteract;
+            @TakkieInteract.canceled -= instance.OnTakkieInteract;
         }
 
-        public void RemoveCallbacks(ITakkiActions instance)
+        public void RemoveCallbacks(ITakkieActions instance)
         {
-            if (m_Wrapper.m_TakkiActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_TakkieActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(ITakkiActions instance)
+        public void SetCallbacks(ITakkieActions instance)
         {
-            foreach (var item in m_Wrapper.m_TakkiActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_TakkieActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_TakkiActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_TakkieActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public TakkiActions @Takki => new TakkiActions(this);
+    public TakkieActions @Takkie => new TakkieActions(this);
 
     // Seipie
     private readonly InputActionMap m_Seipie;
@@ -1230,10 +1230,10 @@ public partial class @PSIA: IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_XRSchemeIndex];
         }
     }
-    public interface ITakkiActions
+    public interface ITakkieActions
     {
-        void OnTakkiMove(InputAction.CallbackContext context);
-        void OnTakkiInteract(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnTakkieInteract(InputAction.CallbackContext context);
     }
     public interface ISeipieActions
     {
