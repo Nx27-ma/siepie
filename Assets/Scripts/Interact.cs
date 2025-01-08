@@ -5,28 +5,31 @@ using UnityEngine.Events;
 
 public class Interact : MonoBehaviour
 {
-    public KeyCode interactbutton;
+    public KeyCode InteractButton;
+    public Interact1 InteractObj;
+    public bool interact;
 
+    public bool test;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
+       interact = Input.GetKey(InteractButton);
 
+        
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
-        {
-            Debug.Log("test");
+        InteractObj = collision.gameObject.GetComponent<Interact1>(); // find the script in the object it is colliding with
+        
 
+        if (collision.CompareTag("Interactibel") && interact)
+        {
+            InteractObj.Activate();
         }
+       
     }
 }
 
