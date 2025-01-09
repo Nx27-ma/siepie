@@ -788,17 +788,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Size.x
+      value: 0.28473628
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Size.y
+      value: 0.17877299
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0020175576
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.04438561
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Name
-      value: Takkie (1)
+      value: Siepie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83132ffce8bbcf940b30a8b8e1531923, type: 3}
+    - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5439458
+      value: -2.14
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3237584
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.z
@@ -852,6 +892,18 @@ PrefabInstance:
     - target: {fileID: 6547028044264211436, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1245,7 +1297,6 @@ GameObject:
   - component: {fileID: 2004439652}
   - component: {fileID: 2004439651}
   - component: {fileID: 2004439653}
-  - component: {fileID: 2004439654}
   m_Layer: 0
   m_Name: Siepie
   m_TagString: Untagged
@@ -1332,36 +1383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9895de56f5bf64ba6962f2dce6abbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2004439654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004439650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: ae572b15133192346b29cff1567d6270, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Seipie
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
