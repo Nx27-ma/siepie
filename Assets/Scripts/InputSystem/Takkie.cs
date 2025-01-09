@@ -192,8 +192,8 @@ public partial class @Takkie: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""66debf99-5fd3-4f55-9293-dfd64c9586e9"",
-                    ""path"": """",
+                    ""id"": ""494cecdf-1e95-4d9e-933b-2fcc665c603b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

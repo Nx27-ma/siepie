@@ -52,17 +52,7 @@ public class Interact1 : MonoBehaviour
             IsInRange = false; // it is no longer in range
         }
     }
-    public void Update()
-    {
-        if (IsInRange)
-        {
-            if (Input.GetKeyDown(InteractButton))
-            {
-                Interacted.Invoke(); // activate unity event
-            }
-
-        }
-    }
+   
      
     public void Interact(InputAction.CallbackContext context)
     {
