@@ -1162,7 +1162,6 @@ GameObject:
   - component: {fileID: 1641254659}
   - component: {fileID: 1641254660}
   - component: {fileID: 1641254661}
-  - component: {fileID: 1641254662}
   m_Layer: 0
   m_Name: Human
   m_TagString: Human
@@ -1346,18 +1345,6 @@ MonoBehaviour:
   health: 0
   respawnPoint: {fileID: 266660027}
   respawnTime: 1.5
---- !u!114 &1641254662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641254655}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 076953db64aaa8e4f9510cf26d8fd2c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1964868544
 GameObject:
   m_ObjectHideFlags: 0

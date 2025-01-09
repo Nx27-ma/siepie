@@ -54,14 +54,21 @@ public class Interact1 : MonoBehaviour
     }
     public void Update()
     {
-        
+        if (IsInRange)
+        {
+            if (Input.GetKeyDown(InteractButton))
+            {
+                Interacted.Invoke(); // activate unity event
+            }
+
+        }
     }
      
     public void Interact(InputAction.CallbackContext context)
     {
         if (IsInRange)
         {
-           Interacted.Invoke(); // activate unity event
+          Interacted.Invoke(); // activate unity event
         }
     }
     public void Test()
