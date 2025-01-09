@@ -1,5 +1,6 @@
 {
   "UID": "0",
-  "SequenceStarter":  "true",
+  "Sequence": "1",
+  "Character" : "Takkie",
   "Dialog": "This is test dialog"  
 }

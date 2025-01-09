@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class JsonDialogReader : ScriptableObject
 {
-  public static List<string> DialogLines { get; private set; }
+  static TextAsset[] allLoadedJsonFiles;
   public static void UpdateDialogSet(int UID)
   {
-    TextAsset[] allLoadedJsonFiles = Resources.LoadAll<TextAsset>("DialogData");
+    if (allLoadedJsonFiles == null)
+    {
+      allLoadedJsonFiles = Resources.LoadAll<TextAsset>("DialogData");
+    }
     Debug.Log(allLoadedJsonFiles.Length);
     List<DialogContainer> allDialogContainers = new();
     foreach (TextAsset asset in allLoadedJsonFiles)
@@ -16,18 +19,11 @@ public class JsonDialogReader : ScriptableObject
       allDialogContainers.Add(JsonUtility.FromJson<DialogContainer>(asset.text));
     }
 
-    getCurrentDialogSet(allDialogContainers);
+    DialogString.getCurrentDialogSet(allDialogContainers);
   //  DialogLines = orderDialogStrings();
   }
 
-  static void getCurrentDialogSet(List<DialogContainer> dialogContainers)
-  {
-    StringBuilder tempDialog = new();
-    foreach (DialogContainer dialogContainer in dialogContainers)
-    {
-       tempDialog.Append(dialogContainer.Dialog);
-    }
-  }
+  
   
 
   //private static List<string> orderDialogStrings()
@@ -45,7 +41,8 @@ public class JsonDialogReader : ScriptableObject
   public class DialogContainer
   {
     public int UID;
-    public bool SequenceStarter;
+    public int Sequence;
+    public string Character;
     public string Dialog;
   }
 }
