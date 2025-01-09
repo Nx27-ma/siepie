@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class Interact1 : MonoBehaviour
 {
     public bool IsInRange; // Bool to know if player is in range
+
+    public Takkie controls;
+    private InputAction interact; 
 
     public string Tag; // Wich tag should be interacted 
     
@@ -13,8 +17,25 @@ public class Interact1 : MonoBehaviour
     public KeyCode InteractButton; 
     public UnityEvent Interacted;
 
-  
+    private void Awake()
+    {
+        controls = new Takkie();
+
+    }
+
+    private void OnEnable()
+    {
+        interact = controls.Player.Interact;
+        interact.Enable();
+        interact.performed += Interact;
+        
+    }
+    private void OnDisable()
+    {
+        interact.Disable();
+    }
     // Start is called before the first frame update
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,13 +54,19 @@ public class Interact1 : MonoBehaviour
     }
     public void Update()
     {
+        
+    }
+     
+    public void Interact(InputAction.CallbackContext context)
+    {
         if (IsInRange)
         {
-            if (Input.GetKeyDown(InteractButton))
-            {
-                Interacted.Invoke(); // activate unity event
-            }
+           Interacted.Invoke(); // activate unity event
         }
+    }
+    public void Test()
+    {
+        Debug.Log("test");
     }
 
    
