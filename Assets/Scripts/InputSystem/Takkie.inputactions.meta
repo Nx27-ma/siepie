@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae572b15133192346b29cff1567d6270
+guid: d29504b4231ca8d47b49cb3c9a22e6fe
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 8404be70184654265930450def6a9037, type: 3}
-  generateWrapperCode: 1
+  generateWrapperCode: 0
   wrapperCodePath: 
-  wrapperClassName: PSIA
+  wrapperClassName: 
   wrapperCodeNamespace: 

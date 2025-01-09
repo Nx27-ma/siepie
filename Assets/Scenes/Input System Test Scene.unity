@@ -801,6 +801,14 @@ PrefabInstance:
       value: Takki (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: d29504b4231ca8d47b49cb3c9a22e6fe, type: 3}
+    - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Keyboard&Mouse
       objectReference: {fileID: 0}
@@ -1336,6 +1344,14 @@ PrefabInstance:
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Name
       value: Takki
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: d29504b4231ca8d47b49cb3c9a22e6fe, type: 3}
+    - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
