@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6547028044264211436}
   - component: {fileID: 3408337425288184044}
   m_Layer: 2
-  m_Name: Takki
+  m_Name: Takkie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

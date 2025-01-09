@@ -802,7 +802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Gamepad
+      value: Keyboard&Mouse
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -1343,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.x
