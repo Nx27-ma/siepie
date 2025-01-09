@@ -18,17 +18,17 @@ public class Interact1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Tag))
+        if (collision.gameObject.CompareTag(Tag)) // if specify tag is in the  object
         {
-            IsInRange = true;
+            IsInRange = true; // it is in range of object
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Tag))
+        if (collision.gameObject.CompareTag(Tag)) // if specify tag  exit the object
         {
-            IsInRange = false;
+            IsInRange = false; // it is no longer in range
         }
     }
     public void Update()
@@ -37,7 +37,7 @@ public class Interact1 : MonoBehaviour
         {
             if (Input.GetKeyDown(InteractButton))
             {
-                Interacted.Invoke();
+                Interacted.Invoke(); // activate unity event
             }
         }
     }
