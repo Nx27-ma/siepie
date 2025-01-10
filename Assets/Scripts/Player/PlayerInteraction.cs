@@ -14,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Awake()
     {
-        ActionAsset = Resources.Load("ActionMap") as InputActionAsset;
+        ActionAsset = Resources.Load<InputActionAsset>("Input System/ActionMap");
         interact = ActionAsset.FindAction("Interact");
     }
 
