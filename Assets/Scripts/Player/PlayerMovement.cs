@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Movement: MonoBehaviour
+public class PlayerMovement: MonoBehaviour
 {
 
-    public float moveSpeed;
-    public KeyCode up,down,left,right;
+    public float MoveSpeed;
+    public bool CanSprint;
+    public float SprintSpeed;
+    public KeyCode Up,Down,Left,Right,Sprint;
+    
 
     
-    bool moveUp, moveDown, moveLeft, moveRight;
+    bool moveUp, moveDown, moveLeft, moveRight,sprinting;
     
     // Start is called before the first frame update
     void Start()
@@ -20,11 +23,20 @@ public class Player_Movement: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveUp = Input.GetKey(up);
-        moveDown = Input.GetKey(down);
-        moveLeft = Input.GetKey(left);
-        moveRight = Input.GetKey(right);
+        moveUp = Input.GetKey(Up);
+        moveDown = Input.GetKey(Down);
+        moveLeft = Input.GetKey(Left);
+        moveRight = Input.GetKey(Right);
+        sprinting = Input.GetKey(Sprint);
 
+        if (CanSprint && sprinting)
+        {
+            MoveSpeed = SprintSpeed;
+        }
+        else
+        {
+            MoveSpeed = 3;
+        }
       
     }
 
@@ -32,7 +44,7 @@ public class Player_Movement: MonoBehaviour
     {
         Vector2 pos = transform.position;
 
-        float moveAmount = moveSpeed * Time.deltaTime;
+        float moveAmount = MoveSpeed * Time.deltaTime;
         Vector2 move = Vector2.zero;
 
         if (moveUp)
