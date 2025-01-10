@@ -495,14 +495,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedc8d87927490a4eacd247dac0ae5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0
-  CanSprint: 0
-  SprintSpeed: 0
-  Up: 0
-  Down: 0
-  Left: 0
-  Right: 0
-  Sprint: 0
+  moveSpeed: 3
+  canSprint: 1
+  sprintSpeed: 6
+  up: 273
+  down: 274
+  left: 276
+  right: 275
+  sprint: 0
 --- !u!212 &822094549
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1250,14 +1250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedc8d87927490a4eacd247dac0ae5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0
-  CanSprint: 0
-  SprintSpeed: 0
-  Up: 0
-  Down: 0
-  Left: 0
-  Right: 0
-  Sprint: 0
+  moveSpeed: 4
+  canSprint: 0
+  sprintSpeed: 0
+  up: 119
+  down: 115
+  left: 97
+  right: 100
+  sprint: 0
 --- !u!61 &1641254659
 BoxCollider2D:
   m_ObjectHideFlags: 0
