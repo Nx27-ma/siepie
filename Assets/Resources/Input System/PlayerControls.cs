@@ -181,8 +181,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""eb30198a-5e43-45ac-bf23-d24d798c9f27"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""id"": ""c52b70d5-4384-4906-bd18-d42ea5e9c520"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -192,8 +192,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c52b70d5-4384-4906-bd18-d42ea5e9c520"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""id"": ""396f90f4-b3f7-4c28-84d8-23e4be2f206d"",
+                    ""path"": ""<Keyboard>/anyKey"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
