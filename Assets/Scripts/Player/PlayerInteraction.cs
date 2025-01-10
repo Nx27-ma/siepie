@@ -6,7 +6,6 @@ public class PlayerInteraction : MonoBehaviour
 {
   public bool IsInRange; // Bool to know if player is in range
   public string Tag; // Which tag should be interacted 
-  public KeyCode InteractButton;
   public UnityEvent Interacted;
   public ActionMap Controls;
 
@@ -47,6 +46,7 @@ public class PlayerInteraction : MonoBehaviour
   {
     if (IsInRange)
     {
+            Debug.Log("Interacted with " + Tag);
       Interacted.Invoke(); // activate unity event
     }
   }
