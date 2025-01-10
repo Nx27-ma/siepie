@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -8,21 +9,20 @@ public class PlayerInteraction : MonoBehaviour
   public string Tag; // Which tag should be interacted 
   public KeyCode InteractButton;
   public UnityEvent Interacted;
-  public ActionMap Controls;
-
+  public InputActionAsset ActionAsset;
   private InputAction interact;
 
-  private void Awake()
-  {
-    Controls = new ActionMap();
-  }
+    private void Awake()
+    {
+        ActionAsset = Resources.Load("ActionMap") as InputActionAsset;
+        interact = ActionAsset.FindAction("Interact");
+    }
 
-  private void OnEnable()
-  {
-    interact = Controls.Player.Interact;
-    interact.Enable();
-    interact.performed += Interact;
-  }
+    private void OnEnable()
+    {
+     interact.Enable();
+     interact.performed += Interact;
+    }
   private void OnDisable()
   {
     interact.Disable();
@@ -43,10 +43,12 @@ public class PlayerInteraction : MonoBehaviour
       IsInRange = false; // it is no longer in range
     }
   }
-  public void Interact(InputAction.CallbackContext context)
+  public void Interact(InputAction.CallbackContext context )
   {
+        Debug.Log("Input works");
     if (IsInRange)
     {
+            Debug.Log("Range works");
       Interacted.Invoke(); // activate unity event
     }
   }
