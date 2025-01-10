@@ -46,8 +46,13 @@ public class PlayerInteraction : MonoBehaviour
   {
     if (IsInRange)
     {
-            Debug.Log("Interacted with " + Tag);
+           // Debug.Log("Interacted with " + Tag);
       Interacted.Invoke(); // activate unity event
     }
   }
+
+    public void Diologue ( string text)
+    {
+        print(text);
+    }
 }
