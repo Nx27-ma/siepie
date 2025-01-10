@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Name
-      value: Takkie (1)
+      value: Siepie
       objectReference: {fileID: 0}
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_TagString
