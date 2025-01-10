@@ -1,9 +1,10 @@
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
 
-public class JsonDialogReader : ScriptableObject
+public class JsonDialogReader : ScriptableObject, IDialog
 {
   static TextAsset[] allLoadedJsonFiles;
   public static void UpdateDialogSet(int UID)
@@ -12,30 +13,15 @@ public class JsonDialogReader : ScriptableObject
     {
       allLoadedJsonFiles = Resources.LoadAll<TextAsset>("DialogData");
     }
-    Debug.Log(allLoadedJsonFiles.Length);
+
     List<DialogContainer> allDialogContainers = new();
     foreach (TextAsset asset in allLoadedJsonFiles)
     {
       allDialogContainers.Add(JsonUtility.FromJson<DialogContainer>(asset.text));
     }
 
-    DialogString.getCurrentDialogSet(allDialogContainers);
-  //  DialogLines = orderDialogStrings();
+    DialogString.OrderDialogContainers(allDialogContainers);
   }
-
-  
-  
-
-  //private static List<string> orderDialogStrings()
-  //{
-  //  if()
-  //  foreach (DialogContainer dialogContainer in CurrentDialogContainers)
-  //  {
-      
-  //  }
-  //  return 
-  //}
-
 
   [System.Serializable]
   public class DialogContainer

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class DialogDisplay : MonoBehaviour
+public class DialogDisplay : MonoBehaviour, IDialog
 {
   public static TextAsset textAsset;
   void Start()
