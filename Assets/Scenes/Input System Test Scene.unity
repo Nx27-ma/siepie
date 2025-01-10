@@ -929,7 +929,7 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls: []
-  ActionAsset: {fileID: -944628639613478452, guid: d29504b4231ca8d47b49cb3c9a22e6fe, type: 3}
+  ActionAsset: {fileID: 0}
 --- !u!1001 &1146960890
 PrefabInstance:
   m_ObjectHideFlags: 0
