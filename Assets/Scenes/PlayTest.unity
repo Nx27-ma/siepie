@@ -132,11 +132,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Size.x
-      value: 0.19
+      value: 0.1728788
       objectReference: {fileID: 0}
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Size.y
-      value: 0.44
+      value: 0.3777411
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0007782467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.028870553
       objectReference: {fileID: 0}
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -148,16 +156,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Name
-      value: Siepie
+      value: Takkie
       objectReference: {fileID: 0}
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_TagString
       value: Human
       objectReference: {fileID: 0}
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Size.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2079982914, guid: bd62ba9cb9b1f92419b1cb066c20edaa, type: 3}
+      objectReference: {fileID: 1556683104, guid: 5ab177cdf95366b41ad9813edfbbec04, type: 3}
+    - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Gamepad
@@ -239,8 +263,8 @@ GameObject:
   - component: {fileID: 291885005}
   - component: {fileID: 291885006}
   - component: {fileID: 291885007}
-  m_Layer: 0
-  m_Name: Segull
+  m_Layer: 3
+  m_Name: Seagull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,12 +311,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52dd2e5a8605a284e9fd079e45698dda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6a36aee5aa279f488443c5b013a373d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.29, y: 0.27}
+  m_Size: {x: 0.3, y: 0.27}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -342,15 +366,15 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.29, y: 0.27}
-    newSize: {x: 0.29, y: 0.27}
+    oldSize: {x: 0.3, y: 0.27}
+    newSize: {x: 0.3, y: 0.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -370,21 +394,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3125148fd3c130e40a7d7ac04f2b3e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsInRange: 0
-  Tag: Cat
-  Interacted:
+  SiepieInteracted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 291885006}
-        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
-        m_MethodName: Diologue
-        m_Mode: 5
+      - m_Target: {fileID: 291885007}
+        m_TargetAssemblyTypeName: Seagull, Assembly-CSharp
+        m_MethodName: SeagullTalkToSiepie
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Hello Cat
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TakkieInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291885007}
+        m_TargetAssemblyTypeName: Seagull, Assembly-CSharp
+        m_MethodName: SeagullTalkToTakkie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &291885007
@@ -396,26 +433,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 291885002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3125148fd3c130e40a7d7ac04f2b3e36, type: 3}
+  m_Script: {fileID: 11500000, guid: ae2a1e25ab4198f4a9566b21de815ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsInRange: 0
-  Tag: Human
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 291885007}
-        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
-        m_MethodName: Diologue
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: KAAAAA!!!!! (you can not talk to birds)
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &324110761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
@@ -740,19 +760,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Name
-      value: Takkie
+      value: Siepie
       objectReference: {fileID: 0}
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_TagString
       value: Cat
       objectReference: {fileID: 0}
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Size.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d6dce68cd239084409310fc2f482e029, type: 3}
+      objectReference: {fileID: 21300000, guid: 83132ffce8bbcf940b30a8b8e1531923, type: 3}
+    - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Keyboard&Mouse
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
