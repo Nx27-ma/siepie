@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8075710103860502860}
   - component: {fileID: 6503701709789304845}
-  - component: {fileID: 6673268558335542715}
   - component: {fileID: 7105467991424867027}
+  - component: {fileID: 3686118381779144247}
+  - component: {fileID: 6673268558335542715}
   - component: {fileID: 6547028044264211436}
   - component: {fileID: 3408337425288184044}
   m_Layer: 2
-  m_Name: Takkie
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,6 +89,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7105467991424867027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687119077836967046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072140ac49463374b872920da4828567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
+--- !u!114 &3686118381779144247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687119077836967046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8839421b337a32244ab0a702b0b2a658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractDistance: 2.5
+  InteractableObjects: []
 --- !u!114 &6673268558335542715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,19 +146,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7105467991424867027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5687119077836967046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072140ac49463374b872920da4828567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 5
 --- !u!50 &6547028044264211436
 Rigidbody2D:
   serializedVersion: 4
@@ -173,7 +188,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
