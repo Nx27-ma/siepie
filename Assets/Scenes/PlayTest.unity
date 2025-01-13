@@ -147,8 +147,16 @@ PrefabInstance:
       value: -0.028870553
       objectReference: {fileID: 0}
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.19
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -179,8 +187,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623865413998970013, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.19
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
@@ -265,7 +281,7 @@ GameObject:
   - component: {fileID: 291885007}
   m_Layer: 3
   m_Name: Seagull
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,6 +765,14 @@ PrefabInstance:
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Size.y
       value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

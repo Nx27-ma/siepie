@@ -1,59 +1,61 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteractor : MonoBehaviour
 {
-    public List<GameObject> InteractableObjects = new List<GameObject>(); //A list over all nearby interactable game objects
+    public float InteractDistance = 2.5f;
+    public List<GameObject> InteractableObjects; //A list over all nearby interactable game objects
 
-    /*
-    Trigger collider on player is currently only meant to pickup objects on the "Interactable tab", this may of course change but that's just how I have it set
-    up right now -Henry
-    */
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnEnable()
     {
-        //If the GameObject that the player has collided with does not exist within the nearby interactable game objects list...
-        if (!InteractableObjects.Contains(collision.gameObject))
-        {
-            //...that GameObject is added to the list...
-            InteractableObjects.Add(collision.gameObject);
-        }
-        else
-        {
-            //...Otherwise a debug warning is sent that something has gone wrong.
-            Debug.LogWarning(collision.gameObject.name + " was not found in InteractableObjects list during trigger enter. Add function not called.");
-        }
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //If the GameObject that the player has collided with exists within the nearby interactable game objects list...
-        if (InteractableObjects.Contains(collision.gameObject))
+        foreach(GameObject curObj in GameObject.FindGameObjectsWithTag("Interactable"))
         {
-            //...That GameObject is removed from the list...
-            InteractableObjects.Remove(collision.gameObject);
-        }
-        else
-        {
-            //...Otherwise a debug warning is sent that something has gone wrong.
-            Debug.LogWarning(collision.gameObject.name + " was not found in InteractableObjects list during trigger exit. Remove function not called.");
+            InteractableObjects.Add(curObj);
         }
     }
 
     //Function called when interact input from the Player Input component is received
     public void OnInteract()
     {
-        //Finds out which player is interacting with the nearest interactable object and sends a message for it to use it's function respective for each player.
-        if(this.tag == "Cat")
+        foreach(GameObject curObj in InteractableObjects)
         {
-            InteractableObjects[0].BroadcastMessage("SiepieInteract");
-        }
-        else
-        {
-            InteractableObjects[0].BroadcastMessage("TakkieInteract");
+            if(Vector3.Distance(curObj.transform.position, this.transform.position) < InteractDistance)
+            {
+                if(tag == "Cat")
+              {
+                    curObj.BroadcastMessage("SiepieInteract");
+              }
+                else
+                {
+                    curObj.BroadcastMessage("TakkieInteract");
+                }
+            }
         }
     }
+#if UNITY_EDITOR
+    private void FixedUpdate()
+    {
+        foreach (GameObject curObj in InteractableObjects)
+        {
+            if (Vector3.Distance(curObj.transform.position, this.transform.position) < InteractDistance)
+            {
+                Debug.DrawLine(curObj.transform.position, this.transform.position, Color.green);
+            }
+            else
+            {
+                Debug.DrawLine(curObj.transform.position, this.transform.position, Color.red);
+            }
+        }
+        
+    }
+#endif
 }
