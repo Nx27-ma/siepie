@@ -1,0 +1,6 @@
+PlayerInteraction makes a new actionmap?
+
+PlayerInteraction????
+
+
+Maybe use one parent script for movement?
