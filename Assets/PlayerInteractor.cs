@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteractor : MonoBehaviour
 {
+    public static event Action<GameObject, GameObject> PlayerInteract;
     public float InteractDistance = 2.5f;
     public List<GameObject> InteractableObjects; //A list over all nearby interactable game objects
 
@@ -15,6 +16,7 @@ public class PlayerInteractor : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    //When scene is loaded, all game objects with interactable tag is added to list
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         foreach(GameObject curObj in GameObject.FindGameObjectsWithTag("Interactable"))
@@ -28,16 +30,12 @@ public class PlayerInteractor : MonoBehaviour
     {
         foreach(GameObject curObj in InteractableObjects)
         {
+            //If distance between an object and the player is less than the interact distance, invoke is called and the object
+            //is interacted with.
             if(Vector3.Distance(curObj.transform.position, this.transform.position) < InteractDistance)
             {
-                if(tag == "Cat")
-              {
-                    curObj.BroadcastMessage("SiepieInteract");
-              }
-                else
-                {
-                    curObj.BroadcastMessage("TakkieInteract");
-                }
+                //Invoke sends both this game object and the object it's trying to interact with
+                PlayerInteract?.Invoke(this.gameObject, curObj);
             }
         }
     }
