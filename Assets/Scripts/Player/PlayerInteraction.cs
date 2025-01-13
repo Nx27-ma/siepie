@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -5,24 +6,24 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
-  public bool IsInRange; // Bool to know if player is in range
-  public string Tag; // Which tag should be interacted 
-  public KeyCode InteractButton;
-  public UnityEvent Interacted;
-  public InputActionAsset ActionAsset;
+  public static event Action<GameObject, GameObject> InteractPressed;
+  private bool isInRange; // Bool to know if player is in range
+  private string collisionTag; // Which tag should be interacted 
+  private InputActionAsset actionAsset;
   private InputAction interact;
+  private GameObject collidedObj;
 
-    private void Awake()
-    {
-        ActionAsset = Resources.Load<InputActionAsset>("Input System/PlayerControls");
-        interact = ActionAsset.FindAction("Interact");
-    }
+  private void Awake()
+  {
+    actionAsset = Resources.Load<InputActionAsset>("Input System/PlayerControls");
+    interact = actionAsset.FindAction("Interact");
+  }
 
-    private void OnEnable()
-    {
-     interact.Enable();
-     interact.performed += Interact;
-    }
+  private void OnEnable()
+  {
+    interact.Enable();
+    interact.performed += Interact;
+  }
   private void OnDisable()
   {
     interact.Disable();
@@ -30,26 +31,25 @@ public class PlayerInteraction : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    if (collision.gameObject.CompareTag(Tag)) // if specify tag is in the  object
+    if (collision.gameObject.CompareTag(collisionTag)) // if specify tag is in the  object
     {
-      IsInRange = true; // it is in range of object
+      collidedObj = collision.gameObject;
+      isInRange = true; // it is in range of object
     }
   }
 
   private void OnTriggerExit2D(Collider2D collision)
   {
-    if (collision.gameObject.CompareTag(Tag)) // if specify tag  exit the object
+    if (collision.gameObject.CompareTag(collisionTag)) // if specify tag  exit the object
     {
-      IsInRange = false; // it is no longer in range
+      isInRange = false; // it is no longer in range
     }
   }
-  public void Interact(InputAction.CallbackContext context )
+  public void Interact(InputAction.CallbackContext context)
   {
-        Debug.Log("Input works");
-    if (IsInRange)
+    if (isInRange)
     {
-            Debug.Log("Range works");
-      Interacted.Invoke(); // activate unity event
+      InteractPressed?.Invoke(gameObject, collidedObj); // activate event action
     }
   }
 }

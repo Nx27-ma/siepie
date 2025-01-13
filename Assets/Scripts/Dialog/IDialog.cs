@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-interface IDialog
+public interface IDialog
 {
 
 }

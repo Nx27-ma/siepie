@@ -9,11 +9,12 @@ public class DialogDisplay : MonoBehaviour, IDialog
   void Start()
   {
     JsonDialogReader.UpdateDialogSet(0);
+    PlayerInteraction.InteractPressed += newDialogRequest;
   }
 
-  // Update is called once per frame
-  void Update()
+  void newDialogRequest(GameObject player, GameObject npc)
   {
+    int npcSeq = npc.GetComponent<NpcDialogSequence>().sequenceNumber;
 
   }
 }
