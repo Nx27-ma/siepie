@@ -151,6 +151,10 @@ PrefabInstance:
       value: Siepie
       objectReference: {fileID: 0}
     - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687119077836967046, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_TagString
       value: Human
       objectReference: {fileID: 0}
@@ -159,8 +163,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2079982914, guid: bd62ba9cb9b1f92419b1cb066c20edaa, type: 3}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Gamepad
+      value: Keyboard&Mouse
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -237,7 +245,6 @@ GameObject:
   - component: {fileID: 291885004}
   - component: {fileID: 291885003}
   - component: {fileID: 291885005}
-  - component: {fileID: 291885006}
   - component: {fileID: 291885007}
   m_Layer: 0
   m_Name: Segull
@@ -358,35 +365,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.27}
   m_EdgeRadius: 0
---- !u!114 &291885006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291885002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3125148fd3c130e40a7d7ac04f2b3e36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsInRange: 0
-  Tag: Cat
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 291885006}
-        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
-        m_MethodName: Diologue
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Hello Cat
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &291885007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsInRange: 0
   Tag: Human
+  InteractButton: 0
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -416,6 +395,7 @@ MonoBehaviour:
           m_StringArgument: KAAAAA!!!!! (you can not talk to birds)
           m_BoolArgument: 0
         m_CallState: 2
+  ActionAsset: {fileID: 0}
 --- !u!4 &324110761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
@@ -752,7 +732,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d6dce68cd239084409310fc2f482e029, type: 3}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Keyboard&Mouse
+      value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -776,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.z
