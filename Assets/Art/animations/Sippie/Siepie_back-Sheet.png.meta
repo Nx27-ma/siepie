@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a50b98ccfe915f4a926c555584546ab
+guid: 1a2daf108e79fa34f8994ecdeed5bc49
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TakkieIdleBack_0
+      name: Siepie_back-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 44
+        width: 36
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e50ce8751c297048971e0c648dad105
-      internalID: -1871680120
+      spriteID: d0ee6f2a01f3cfc41b60be57fc5171bb
+      internalID: -1633092085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TakkieIdleBack_1
+      name: Siepie_back-Sheet_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 36
         y: 0
-        width: 19
-        height: 44
+        width: 36
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66eb3c0344ad10a47a8ba9247b973018
-      internalID: -1126931914
+      spriteID: fc51d4a686f57db4a92cb310f78a148b
+      internalID: 1140685070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TakkieIdleBack_2
+      name: Siepie_back-Sheet_2
       rect:
         serializedVersion: 2
-        x: 38
+        x: 72
         y: 0
-        width: 19
-        height: 44
+        width: 36
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 692f1b149024d834aa6449e18f676e7a
-      internalID: -1265007883
+      spriteID: 625f2cead5c836742982a5d771f23aef
+      internalID: 970649814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TakkieIdleBack_3
+      name: Siepie_back-Sheet_3
       rect:
         serializedVersion: 2
-        x: 57
+        x: 108
         y: 0
-        width: 19
-        height: 44
+        width: 36
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f2261f003f212d4198a8f62942192c5
-      internalID: 1544683755
+      spriteID: 782f2e476bd7fe947bb42c9614c18924
+      internalID: -666492313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Siepie_back-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436a3cd6a31c5db4fa7439e15e8ce82c
+      internalID: -1325948432
       vertices: []
       indices: 
       edges: []
@@ -191,10 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TakkieIdleBack_0: -1871680120
-      TakkieIdleBack_1: -1126931914
-      TakkieIdleBack_2: -1265007883
-      TakkieIdleBack_3: 1544683755
+      Siepie_back-Sheet_0: -1633092085
+      Siepie_back-Sheet_1: 1140685070
+      Siepie_back-Sheet_2: 970649814
+      Siepie_back-Sheet_3: -666492313
+      Siepie_back-Sheet_4: -1325948432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
