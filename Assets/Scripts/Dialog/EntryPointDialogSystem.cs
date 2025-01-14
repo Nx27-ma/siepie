@@ -7,16 +7,16 @@ using UnityEngine;
 //reflection for instantiating all necessary dialog scripts
 public class EntryPointDialogSystem : MonoBehaviour
 {
-  public static EntryPointDialogSystem instance;
+  public static EntryPointDialogSystem Instance;
   public static List<IDialog> InitList;
   private void Start()
   {
     InitList =  InitAllUnityObjectsFromInterface<IDialog>();
-    foreach(IDialog dialog in InitList)
+    if (Instance != null)
     {
-      print(dialog);
+      Debug.LogError($"Please don't create add a second {this}, {this} is a supposed to be a singleton - use the public instance instead");
     }
-    instance = this;
+    Instance = this;
   }
   private List<T> InitAllUnityObjectsFromInterface<T>() where T : class
   {

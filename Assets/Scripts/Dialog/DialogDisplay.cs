@@ -9,7 +9,7 @@ public class DialogDisplay : MonoBehaviour, IDialog
   void Start()
   {
     JsonDialogReader.UpdateDialogSet(0);
-    PlayerInteraction.InteractPressed += newDialogRequest;
+  
   }
 
   void newDialogRequest(GameObject player, GameObject npc)
