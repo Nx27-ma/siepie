@@ -4,19 +4,8 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    public bool test; 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public bool Test; 
+   
     public void DestroyObj(GameObject obj)
     {
 
