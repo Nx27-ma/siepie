@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 
 public class TakkieMovement : MonoBehaviour
 {
-    int currentWalkAnim;
+  //bool emoting = false;
+  int currentWalkAnim;
   public float MoveSpeed = 2f;
   Rigidbody2D rb;
   Vector2 moveValue;
@@ -26,26 +27,51 @@ public class TakkieMovement : MonoBehaviour
     moveValue = value.Get<Vector2>();
   }
 
-  //Velocity is changed based on the value of the vector received to moveValue during OnMove -Henry
   private void FixedUpdate()
   {
-    Vector2 move = transform.up * moveValue.y + transform.right * moveValue.x;
-    animator.SetFloat("X", moveValue.x);
-    animator.SetFloat("Y", moveValue.y);
-    if (move == zero)
-    {
-        animator.SetBool("Moving", false);
-    }
-    else
-    {
-        animator.SetBool("Moving", true);
-    }
-    rb.velocity = move * MoveSpeed;
-        Debug.Log(this.tag + ": " + move);
-  }
+        //Velocity is changed based on the value of the vector received to moveValue during OnMove. -Henry
+        //while(emoting == false)
+        Vector2 move = transform.up * moveValue.y + transform.right * moveValue.x;
 
-  public void ChangeCurrentWalkAnim(int value)
-  {
-        animator.SetInteger("WalkAnim", value);
-  }
+        //Animator receives position of the joystick relative to a unit circle. -Henry
+        animator.SetFloat("X", moveValue.x);
+        animator.SetFloat("Y", moveValue.y);
+        
+        //Animator bool is toggle on and off depending on if the move value is equal to zero. -Henry
+        if (move == zero)
+        {
+            animator.SetBool("Moving", false);
+        }
+        else
+        {
+            animator.SetBool("Moving", true);
+        }
+
+        //Velocity is changed
+        rb.velocity = move * MoveSpeed;
+
+        /*Finds out in what direction the player is moving and sends a value to the animator to notify it what idle animation it should switch to
+        When player is not moving based on that value. In other words, if the player is moving up and then comes to a stop, the animator will start
+        playing the upwards idle animation. -Henry */
+        if (Math.Sign(moveValue.y) == 1 && -0.5f < moveValue.x && moveValue.x < 0.5f)
+        {
+            animator.SetInteger("WalkAnim", 1);
+        }
+
+        else if (Math.Sign(moveValue.y) == -1 && -0.5f < moveValue.x && moveValue.x < 0.5f)
+        {
+            animator.SetInteger("WalkAnim", 3);
+        }
+
+        else if (Math.Sign(moveValue.x) == -1 && -0.5f < moveValue.y && moveValue.y < 0.5f)
+        {
+            animator.SetInteger("WalkAnim", 2);
+        }
+
+        else if (Math.Sign(moveValue.x) == 1 && -0.5f < moveValue.y && moveValue.y < 0.5f)
+        {
+            animator.SetInteger("WalkAnim", 4);
+        }
+    }
+
 }

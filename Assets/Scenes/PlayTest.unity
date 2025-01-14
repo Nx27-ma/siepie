@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: 
+      value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -993,7 +993,7 @@ Animator:
   m_GameObject: {fileID: 1436270321}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9ef8de718058164685d4ddf643ec5d5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1530,8 +1530,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1288853838}
   - {fileID: 126458616}
+  - {fileID: 1288853838}
   - {fileID: 291885004}
   - {fileID: 1362775658}
   - {fileID: 1999718729}
