@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Processors;
 
 public class TakkieMovement : MonoBehaviour
 {
@@ -71,22 +72,22 @@ public class TakkieMovement : MonoBehaviour
         /*Finds out in what direction the player is moving and sends a value to the animator to notify it what idle animation it should switch to
         When player is not moving based on that value. In other words, if the player is moving up and then comes to a stop, the animator will start
         playing the upwards idle animation. -Henry */
-        if (Math.Sign(moveValue.y) == 1 && -0.5f < moveValue.x && moveValue.x < 0.5f)
+        if (moveValue.y > 0.2 && -0.5f < moveValue.x && moveValue.x < 0.5f)
         {
             animator.SetInteger("WalkAnim", 1);
         }
 
-        else if (Math.Sign(moveValue.y) == -1 && -0.5f < moveValue.x && moveValue.x < 0.5f)
+        else if (moveValue.y < -0.2 && -0.5f < moveValue.x && moveValue.x < 0.5f)
         {
             animator.SetInteger("WalkAnim", 3);
         }
 
-        else if (Math.Sign(moveValue.x) == -1 && -0.5f < moveValue.y && moveValue.y < 0.5f)
+        else if (moveValue.x < -0.2 && -0.5f < moveValue.y && moveValue.y < 0.5f)
         {
             animator.SetInteger("WalkAnim", 2);
         }
 
-        else if (Math.Sign(moveValue.x) == 1 && -0.5f < moveValue.y && moveValue.y < 0.5f)
+        else if (moveValue.x > 0.2 && -0.5f < moveValue.y && moveValue.y < 0.5f)
         {
             animator.SetInteger("WalkAnim", 4);
         }
