@@ -14,10 +14,6 @@ public class DialogNodes : EditorWindow
     DialogNodes dialogNodes = GetWindow<DialogNodes>();
     dialogNodes.titleContent = new GUIContent("DialogEditor");
   }
-
-  private void OnEnable()
-  {
-  }
   private void OnGUI()
   {
     GUIStyle GUIStyle = new GUIStyle();

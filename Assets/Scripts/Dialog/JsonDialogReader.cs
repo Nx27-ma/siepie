@@ -20,7 +20,7 @@ public class JsonDialogReader : ScriptableObject, IDialog
       allDialogContainers.Add(JsonUtility.FromJson<DialogContainer>(asset.text));
     }
 
-    DialogString.OrderDialogContainers(allDialogContainers);
+    //DialogString.OrderDialogContainers(allDialogContainers);
   }
 
   [System.Serializable]
