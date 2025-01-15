@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00f1b3ef60a88c54191b64585774ff50
+guid: ff9dc30ff5cdd90429ab48859f12eb70
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,9 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -85,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,106 +97,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Siepie_back-Sheet_0
+      name: Siepie_Idle_left_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 7
+        y: 10
         width: 36
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13c21828232d9c34eb242d933f9e4fe1
-      internalID: 232053994
+      spriteID: b530361d9f745c34e93f60797ae9e0b4
+      internalID: 697003223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Siepie_back-Sheet_1
+      name: Siepie_Idle_left_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 0
+        x: 57
+        y: 10
         width: 36
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2f684e78b26cc4c98811b3d7f74d73
-      internalID: 1907418008
+      spriteID: 6738f5d9f3017df42a994f760fb1364f
+      internalID: 96403539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Siepie_back-Sheet_2
+      name: Siepie_Idle_left_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
+        x: 107
+        y: 10
         width: 36
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3490e5191b8556a46991f37ae3ec4660
-      internalID: -136210410
+      spriteID: 180c9605394362d499a08f561d0d11c2
+      internalID: -2073799358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Siepie_back-Sheet_3
+      name: Siepie_Idle_left_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 0
+        x: 157
+        y: 10
         width: 36
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cacbdafd0c8c33949ae6a35f1f96a8ab
-      internalID: 2045330128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Siepie_back-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 36
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6f54d70b2b8f684e881783dc1e988d1
-      internalID: 748461283
+      spriteID: dc9bcec4b4ab74341a753b053c044a02
+      internalID: -1407269732
       vertices: []
       indices: 
       edges: []
@@ -204,7 +183,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: be34ef3348b910746baf13fec0b5da42
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -212,11 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Siepie_back-Sheet_0: 232053994
-      Siepie_back-Sheet_1: 1907418008
-      Siepie_back-Sheet_2: -136210410
-      Siepie_back-Sheet_3: 2045330128
-      Siepie_back-Sheet_4: 748461283
+      Siepie_Idle_left_0: 697003223
+      Siepie_Idle_left_1: 96403539
+      Siepie_Idle_left_2: -2073799358
+      Siepie_Idle_left_3: -1407269732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
