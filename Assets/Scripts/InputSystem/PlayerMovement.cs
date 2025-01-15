@@ -6,9 +6,10 @@ using UnityEngine.InputSystem;
 
 public class TakkieMovement : MonoBehaviour
 {
-  //bool emoting = false;
+  bool emoting, running = false;
   int currentWalkAnim;
-  public float MoveSpeed = 2f;
+  float moveSpeed;
+  public float WalkSpeed, RunSpeed;
   Rigidbody2D rb;
   Vector2 moveValue;
   Animator animator;
@@ -20,12 +21,18 @@ public class TakkieMovement : MonoBehaviour
     animator = GetComponent<Animator>();
     rb = GetComponent<Rigidbody2D>();
   }
+
   //Function is called when Takkie receives the OnTakkieMove input from the PlayerInput component
   //Value of the Vector2 value is read as Value -Henry
   public void OnMove(InputValue value)
   {
     moveValue = value.Get<Vector2>();
   }
+
+  public void Onrun()
+    {
+        running = true;
+    }
 
   private void FixedUpdate()
   {
@@ -47,8 +54,19 @@ public class TakkieMovement : MonoBehaviour
             animator.SetBool("Moving", true);
         }
 
+        //Checks if the player is running and switches speed accordingly depending on running bool -Henry
+        if (!running)
+        {
+            moveSpeed = WalkSpeed;
+        }
+        else
+        {
+            moveSpeed = RunSpeed;
+        }
+        running = false;
+
         //Velocity is changed
-        rb.velocity = move * MoveSpeed;
+        rb.velocity = move * moveSpeed;
 
         /*Finds out in what direction the player is moving and sends a value to the animator to notify it what idle animation it should switch to
         When player is not moving based on that value. In other words, if the player is moving up and then comes to a stop, the animator will start
