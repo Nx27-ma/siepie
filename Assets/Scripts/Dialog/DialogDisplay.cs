@@ -8,7 +8,6 @@ public class DialogDisplay : MonoBehaviour, IDialog
   public static TextAsset textAsset;
   void Start()
   {
-    JsonDialogReader.UpdateDialogSet(0);
   
   }
 

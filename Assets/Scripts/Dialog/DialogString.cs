@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using static JsonDialogReader;
 using System.Linq;
 
 public class DialogString : ScriptableObject, IDialog
