@@ -41,27 +41,20 @@ public class JsonLoader : MonoBehaviour, IDialog
     }
     LoadAssetsFromJson(); //Making sure that its the most up to date version in case the file has been edited by hand
     AddToCharacterDict(NewlyAddedDialogData);
-    
-    
-
-
   }
 
-  static void AddToCharacterDict(List<DialogContainer> loopList)
+  static void AddToCharacterDict(List<DialogContainer> dialog)
   {
- for (int i = 0; i < loopList.Count; i++) {
-
-      Debug.Log(loopList[i].Character);
-      if (!CharacterDictionary.ContainsKey(loopList[i].Character))
+    foreach (DialogContainer dialogContainer in dialog)
+    {
+      if (!CharacterDictionary.ContainsKey(dialogContainer.Character))
       {
-        CharacterDictionary.Add(loopList[i].Character, new List<DialogContainer> { loopList[i] });
+        CharacterDictionary.Add(dialogContainer.Character, new List<DialogContainer> { dialogContainer });
       }
-      else if (CharacterDictionary.ContainsKey(loopList[i].Character))
+      else if (CharacterDictionary.ContainsKey(dialogContainer.Character))
       {
-        CharacterDictionary[loopList[i].Character].Add(loopList[i]);
+        CharacterDictionary[dialogContainer.Character].Add(dialogContainer);
       }
-
     }
   }
-
 }
