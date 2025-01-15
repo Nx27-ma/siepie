@@ -10,7 +10,8 @@ using static DialogList;
 
 public class JsonLoader : MonoBehaviour, IDialog
 {
-  static string pathToJsonFiles;
+  static string pathToJsonFiles = string.Empty;
+ static string[] currentJsonFilesNames;
   public static void LoadAssetsFromJson()
   {
     TextAsset[] textAssets = Resources.LoadAll<TextAsset>("DialogData");
@@ -18,7 +19,6 @@ public class JsonLoader : MonoBehaviour, IDialog
     foreach (TextAsset dialog in CharacterJsons)
     {
       CurrentDialogData.Add(JsonUtility.FromJson<DialogContainer>(dialog.text));
-
     }
     AddToCharacterDict(CurrentDialogData);
 
@@ -35,12 +35,16 @@ public class JsonLoader : MonoBehaviour, IDialog
   {
     if (pathToJsonFiles == string.Empty)
     {
-      pathToJsonFiles = Application.persistentDataPath;
-      pathToJsonFiles = Path.Combine(pathToJsonFiles, "Resources/DialogData");
-      Debug.Log(pathToJsonFiles);
+      pathToJsonFiles = Application.dataPath;
+      currentJsonFilesNames = Directory.GetFiles(pathToJsonFiles, "*.json", SearchOption.AllDirectories);
     }
     LoadAssetsFromJson(); //Making sure that its the most up to date version in case the file has been edited by hand
     AddToCharacterDict(NewlyAddedDialogData);
+
+    foreach(TextAsset json in CharacterJsons)
+    {
+
+    }
   }
 
   static void AddToCharacterDict(List<DialogContainer> dialog)
