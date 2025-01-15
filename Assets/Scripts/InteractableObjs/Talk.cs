@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Talk : MonoBehaviour
+public class Talk : PlayerInteraction
 {
-    public void TalkSiepie(string SiepieLine)
+    public override void PlayerInteracted(GameObject player, GameObject interactedObject)
     {
-        Debug.Log(SiepieLine);
-    }
-
-    public void TalkTakkie(string TakkieLine)
-    {
-        Debug.Log(TakkieLine);
+        base.PlayerInteracted(player, interactedObject);
+        if(interactedObject == this.gameObject)
+        {
+            if (player.CompareTag("Cat"))
+            {
+                Debug.Log("Hello there good fellow");
+            }
+            else
+            {
+                Debug.Log("SCRAAAAAAAAW");
+            }
+        }
     }
 }

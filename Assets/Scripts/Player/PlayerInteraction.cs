@@ -20,9 +20,9 @@ public class PlayerInteraction : MonoBehaviour
   }
 
     //Function called from PlayerInteractor invoke
-  public void PlayerInteracted(GameObject player, GameObject interactedObject)
+  public virtual void PlayerInteracted(GameObject player, GameObject interactedObject)
   {
-        Debug.Log("Interacting with " + interactedObject.name + ".");
+        
   }
 
     
