@@ -40,8 +40,24 @@ public class PlayerInteractor : MonoBehaviour
                 objectsToInteract.Add(curObj);
             }
         }
-        PlayerInteract?.Invoke(this.gameObject, objectsToInteract[0]);
-        objectsToInteract.Remove(objectsToInteract[0]);
+        if (objectsToInteract.Count == 1)
+        {
+            PlayerInteract?.Invoke(this.gameObject, objectsToInteract[0]);
+            objectsToInteract.Remove(objectsToInteract[0]);
+        }
+        else if (objectsToInteract.Count > 1)
+        {
+            objectsToInteract.Sort(delegate (GameObject gameObject1, GameObject gameObject2)
+            {
+                return Vector3.Distance(gameObject1.transform.position, this.transform.position).CompareTo(Vector3.Distance(gameObject2.transform.position, this.transform.position));
+            });
+            PlayerInteract?.Invoke(this.gameObject, objectsToInteract[0]);
+            objectsToInteract.RemoveAll(x => x.CompareTag("Interactable"));
+        }
+        else
+        {
+            Debug.Log(this.gameObject.name + " found no object to interact with.");
+        }
     }
 #if UNITY_EDITOR
     private void FixedUpdate()
@@ -51,6 +67,10 @@ public class PlayerInteractor : MonoBehaviour
             if (Vector3.Distance(curObj.transform.position, this.transform.position) < InteractDistance)
             {
                 Debug.DrawLine(curObj.transform.position, this.transform.position, Color.green);
+            }
+            else if (curObj == null)
+            {
+                InteractableObjects.Remove(curObj);
             }
             else
             {
