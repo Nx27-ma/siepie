@@ -10,7 +10,7 @@ public class PlayerInteractor : MonoBehaviour
     public static event Action<GameObject, GameObject> PlayerInteract;
     public float InteractDistance = 2.5f;
     public List<GameObject> InteractableObjects; //A list over all nearby interactable game objects
-    List<GameObject> objectsToInteract;
+    List<GameObject> objectsToInteract = new List<GameObject>();
 
     private void OnEnable()
     {
@@ -36,6 +36,7 @@ public class PlayerInteractor : MonoBehaviour
             if(Vector3.Distance(curObj.transform.position, this.transform.position) < InteractDistance)
             {
                 //Invoke sends both this game object and the object it's trying to interact with
+
                 objectsToInteract.Add(curObj);
             }
         }

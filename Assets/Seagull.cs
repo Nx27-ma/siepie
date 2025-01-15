@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seagull : MonoBehaviour
+public class Seagull : PlayerInteraction
 {
+
+   
    public void SeagullTalkToSiepie()
     {
         Debug.Log("GIVE ME MY CHIPPIES. CHIPPIES NOW!!!");
