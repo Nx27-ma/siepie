@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -19,10 +20,10 @@ public class PlayerInteraction : MonoBehaviour
    */
   }
 
-    //Function called from PlayerInteractor invoke
-  public void PlayerInteracted(GameObject player, GameObject interactedObject)
+    //Function called from PlayerInteractor invoke -Henry
+  public virtual void PlayerInteracted(GameObject player, GameObject interactedObject)
   {
-        Debug.Log("Interacting with " + interactedObject.name + ".");
+
   }
 
     
