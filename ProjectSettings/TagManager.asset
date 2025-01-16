@@ -8,6 +8,8 @@ TagManager:
   - Cat
   - Enemy
   - Interactable
+  - Logo
+  - Main Menu Image
   layers:
   - Default
   - TransparentFX
