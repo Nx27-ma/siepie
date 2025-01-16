@@ -9,10 +9,11 @@ public class Layer : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100);
     }
 
     void Update()
     {
-        spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100);
+        
     }
 }
