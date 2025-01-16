@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Talk : PlayerInteraction
 {
+    //I call my potato a structure the way it's so structurally sound -Henry
     public struct Potato
     {
         public static bool has = false;
     }
+
+    //GIVE ME A DIALOGUE SYSTEM NORA AND MY LIFE IS YOURS -Henry
     public override void PlayerInteracted(GameObject player, GameObject interactedObject)
     {
         if(interactedObject == this.gameObject)

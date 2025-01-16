@@ -9,15 +9,15 @@ public class PlayerInteractor : MonoBehaviour
 {
     public static event Action<GameObject, GameObject> PlayerInteract;
     public float InteractDistance = 2.5f;
-    public List<GameObject> InteractableObjects; //A list over all nearby interactable game objects
-    List<GameObject> objectsToInteract = new List<GameObject>();
+    public List<GameObject> InteractableObjects; //A list over all game objects -Henry
+    List<GameObject> objectsToInteract = new List<GameObject>(); //An interchanging list over all nearby interactable game objects -Henry
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    //When scene is loaded, all game objects with interactable tag is added to list
+    //When scene is loaded, all game objects with interactable tag is added to list -Henry
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         foreach(GameObject curObj in GameObject.FindGameObjectsWithTag("Interactable"))
@@ -31,20 +31,23 @@ public class PlayerInteractor : MonoBehaviour
     {
         foreach(GameObject curObj in InteractableObjects)
         {
-            //If distance between an object and the player is less than the interact distance, invoke is called and the object
-            //is interacted with.
+            /*If distance between an object and the player is less than the interact distance, the object is added to a seperate list which will be used
+            to invoke interact with more context after loop. -Henry*/
             if(Vector3.Distance(curObj.transform.position, this.transform.position) < InteractDistance)
             {
-                //Invoke sends both this game object and the object it's trying to interact with
-
                 objectsToInteract.Add(curObj);
             }
         }
+
+        //If there is a single game object found in the list, it is used as the object for the interact invoke and then removed from the object list. -Henry
         if (objectsToInteract.Count == 1)
         {
             PlayerInteract?.Invoke(this.gameObject, objectsToInteract[0]);
             objectsToInteract.Remove(objectsToInteract[0]);
         }
+
+        /*If there are multiple objects in the object list, the objects are sorted so that the closest object becomes the first element, then
+        the first element on the list is invoked and all interactable objects in object list are removed. -Henry */
         else if (objectsToInteract.Count > 1)
         {
             objectsToInteract.Sort(delegate (GameObject gameObject1, GameObject gameObject2)
@@ -54,12 +57,16 @@ public class PlayerInteractor : MonoBehaviour
             PlayerInteract?.Invoke(this.gameObject, objectsToInteract[0]);
             objectsToInteract.RemoveAll(x => x.CompareTag("Interactable"));
         }
+
+        //If there is no (or somehow -1) objects in the object list, a debug log is made stating that no objects were found nearby. -Henry
         else
         {
             Debug.Log(this.gameObject.name + " found no object to interact with.");
         }
     }
 #if UNITY_EDITOR
+
+    //Fixed update that makes lines to all interactable objects and turns the lines green if a player is interact distance with them. -Henry
     private void FixedUpdate()
     {
         foreach (GameObject curObj in InteractableObjects)

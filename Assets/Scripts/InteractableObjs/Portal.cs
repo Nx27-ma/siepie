@@ -9,6 +9,7 @@ public class Portal : PlayerInteraction
     {
         if(interactedObject == this.gameObject && player.CompareTag("Cat"))
         {
+            //Positions Siepie to the specified transform.position. -Henry
             player.transform.position = Destination.transform.position;
             Debug.Log(this.gameObject.name + " Teleporting");
         }
