@@ -10,7 +10,7 @@ public class PlayerInteractor : MonoBehaviour
     bool controlLocked = false;
     public static event Action<GameObject, GameObject> PlayerInteract;
     public float InteractDistance = 2.5f;
-    public List<GameObject> InteractableObjects; //A list over all game objects -Henry
+    static public List<GameObject> InteractableObjects = new List<GameObject>(); //A list over all game objects -Henry
     List<GameObject> objectsToInteract = new List<GameObject>(); //An interchanging list over all nearby interactable game objects -Henry
 
     private void OnEnable()
