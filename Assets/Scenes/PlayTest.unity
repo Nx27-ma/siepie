@@ -452,6 +452,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Human
       objectReference: {fileID: 0}
+    - target: {fileID: 6163792984902035016, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9671a9d446ef8c84a82e5c0ebb7af706, type: 2}
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Size.x
       value: 0.27
@@ -731,7 +735,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.3, y: 0.27}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.3, y: 0.27}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -780,12 +784,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 802060b3f554fc241b775a23c17c1714, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 250eced012c8b6e49b51279cc91eb859, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3, y: 0.27}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1544,18 +1548,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 6163792984902035016, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d9ef8de718058164685d4ddf643ec5d5, type: 2}
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Size.x
-      value: 0.32
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Size.y
-      value: 0.26
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6977b7fc95f366d419fc0d2b1a7d9ab2, type: 3}
+      objectReference: {fileID: -1033892360, guid: 7e200d34a9c44034db0cc2ccf92839af, type: 3}
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
