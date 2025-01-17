@@ -10,8 +10,9 @@ using static DialogList;
 
 public class JsonLoader : MonoBehaviour, IDialog
 {
+  static DirectoryInfo directory;
   static string pathToJsonFiles = string.Empty;
- static string[] currentJsonFilesNames;
+  static string[] currentJsonFilesNames;
   public static void LoadAssetsFromJson()
   {
     TextAsset[] textAssets = Resources.LoadAll<TextAsset>("DialogData");
@@ -33,17 +34,20 @@ public class JsonLoader : MonoBehaviour, IDialog
 
   public static void WriteUpdateToJson()
   {
-    if (pathToJsonFiles == string.Empty)
-    {
-      pathToJsonFiles = Application.dataPath;
-      currentJsonFilesNames = Directory.GetFiles(pathToJsonFiles, "*.json", SearchOption.AllDirectories);
-    }
+    pathToJsonFiles = Application.dataPath;
+    directory = new DirectoryInfo(pathToJsonFiles);
+
     LoadAssetsFromJson(); //Making sure that its the most up to date version in case the file has been edited by hand
     AddToCharacterDict(NewlyAddedDialogData);
+    var fileInfos = directory.GetFiles("*.json", SearchOption.AllDirectories);
+    string fileNames = Path.GetFileNameWithoutExtension(fileInfos[0].FullName));
 
-    foreach(TextAsset json in CharacterJsons)
+    foreach (string key in CharacterDictionary.Keys)
     {
+      if(fileNames.Contains(key))
+      {
 
+      }
     }
   }
 
