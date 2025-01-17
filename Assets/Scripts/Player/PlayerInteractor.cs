@@ -17,6 +17,7 @@ public class PlayerInteractor : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+
     //When scene is loaded, all game objects with interactable tag is added to list -Henry
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -36,6 +37,7 @@ public class PlayerInteractor : MonoBehaviour
             if(Vector3.Distance(curObj.transform.position, this.transform.position) < InteractDistance)
             {
                 objectsToInteract.Add(curObj);
+                
             }
         }
 
