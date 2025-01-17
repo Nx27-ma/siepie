@@ -6,7 +6,7 @@ public class InteractablePickup : PlayerInteraction
 {
     public GameObject takkie;
     public Animator animator;
-    public SpriteRenderer objSprite, thisObjSprite;
+    public SpriteRenderer thisObjSprite;
 
     public override void PlayerInteracted(GameObject player, GameObject interactedObject)
     {
