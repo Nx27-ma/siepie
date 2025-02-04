@@ -1,8 +1,11 @@
-[System.Serializable]
-public class DialogContainer
+namespace Dialog
 {
-  public int UID; //DialogSet identifier 
-  public int Sequence; //Index for the DialogSet
-  public string Character; 
-  public string Dialog;
+  [System.Serializable]
+  public class DialogContainer
+  {
+    public int UID; //DialogSet identifier 
+    public int Sequence; //Index for the DialogSet
+    public string Character;
+    public string Dialog;
+  }
 }

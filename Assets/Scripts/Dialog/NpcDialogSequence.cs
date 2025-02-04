@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NpcDialogSequence : MonoBehaviour
+namespace Dialog
 {
-  public int sequenceNumber;
+  public class NpcDialogSequence : MonoBehaviour
+  {
+    internal int sequenceNumber;
+  }
 }

@@ -4,18 +4,21 @@ using System;
 using UnityEngine;
 using System.Linq;
 
-public class DialogString : ScriptableObject, IDialog
+namespace Dialog
 {
-  static SortedList<int, DialogContainer> orderedDialogList;
-  public static void OrderDialogContainers(List<DialogContainer> dialogContainers)
+  public class DialogString : ScriptableObject, IDialog
   {
-    foreach (DialogContainer dialogContainer in dialogContainers)
+    static SortedList<int, DialogContainer> orderedDialogList;
+    public static void OrderDialogContainers(List<DialogContainer> dialogContainers)
     {
-      orderedDialogList.Add(dialogContainer.Sequence, dialogContainer);
+      foreach (DialogContainer dialogContainer in dialogContainers)
+      {
+        orderedDialogList.Add(dialogContainer.Sequence, dialogContainer);
+      }
     }
-  }
-  public static List<string> GetAllStrings()
-  {
-    return orderedDialogList.Values.Select(dialog => dialog.Dialog).ToList();
+    public static List<string> GetAllStrings()
+    {
+      return orderedDialogList.Values.Select(dialog => dialog.Dialog).ToList();
+    }
   }
 }

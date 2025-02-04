@@ -8,7 +8,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
-        PlayerInteractor.PlayerInteract += PlayerInteracted;
+        PlayerInteractor.PlayerInteracted += PlayerInteracted;
     }
 
     public void InRange()

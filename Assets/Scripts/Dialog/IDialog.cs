@@ -1,4 +1,7 @@
-﻿public interface IDialog
+﻿namespace Dialog
 {
+  public interface IDialog
+  {
 
+  }
 }

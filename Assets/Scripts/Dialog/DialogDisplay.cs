@@ -1,19 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-public class DialogDisplay : MonoBehaviour, IDialog
+namespace Dialog
 {
-  public static TextAsset textAsset;
-  void Start()
+  public static class DialogDisplay
   {
-  
-  }
+    public static TextAsset textAsset;
+    static DialogDisplay()
+    {
 
-  void newDialogRequest(GameObject player, GameObject npc)
-  {
-    int npcSeq = npc.GetComponent<NpcDialogSequence>().sequenceNumber;
+    }
+    static void newDialogRequest(GameObject player, GameObject npc)
+    {
+      int npcSeq = npc.GetComponent<NpcDialogSequence>().sequenceNumber;
 
+    }
   }
 }

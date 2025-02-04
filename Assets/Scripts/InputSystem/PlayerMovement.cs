@@ -4,14 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TakkieMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-  public float MoveSpeed = 2f;
-  Rigidbody2D rb;
-  Vector2 moveValue;
+  [SerializeField] float MoveSpeed = 2f;
 
-  //Neccesary components fetched on enable -Henry
-  private void OnEnable()
+  Rigidbody2D rb;
+  Vector2 inputSystemVector;
+  Vector2 moveAmount;
+
+  //Neccesary components fetched on enable -Henry ~changed it to start for performance 
+  private void Start()
   {
     rb = GetComponent<Rigidbody2D>();
   }
@@ -19,13 +21,13 @@ public class TakkieMovement : MonoBehaviour
   //Value of the Vector2 value is read as Value -Henry
   public void OnMove(InputValue value)
   {
-    moveValue = value.Get<Vector2>();
+    inputSystemVector = value.Get<Vector2>();
   }
 
-  //Velocity is changed based on the value of the vector received to moveValue during OnMove -Henry
+  //Velocity is changed based on the value of the vector received to inputSystemVector during OnMove -Henry
   private void FixedUpdate()
   {
-    Vector2 move = transform.up * moveValue.y * MoveSpeed + transform.right * moveValue.x * MoveSpeed;
-    rb.velocity = move;
+    moveAmount = transform.up * inputSystemVector.y * MoveSpeed + transform.right * inputSystemVector.x * MoveSpeed;
+    rb.velocity = moveAmount;
   }
 }

@@ -6,7 +6,7 @@ public class Tempentry : MonoBehaviour
 {
     void Start()
     {
-    JsonLoader.WriteUpdateToJson();
+   // JsonLoader.WriteUpdateToJson();
     }
 
     // Update is called once per frame
