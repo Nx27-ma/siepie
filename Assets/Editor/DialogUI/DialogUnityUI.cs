@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Dialog;
 
 public class DialogUnityUI : EditorWindow
 {
   [SerializeField]
   private VisualTreeAsset m_VisualTreeAsset = default;
-  List<string> foldoutNames = new List<string>();
 
 
   [MenuItem("Window/DialogUnityUI")]
@@ -25,16 +25,30 @@ public class DialogUnityUI : EditorWindow
     // Instantiate UXML
     VisualElement labelFromUXML = m_VisualTreeAsset.Instantiate();
     root.Add(labelFromUXML);
+  }
+}
 
+public class CharacterListEditor
+{
+  Label highestTree;
 
-    ListView namesListView = root.Query<ListView>("DataContainerUXML");
-    Foldout foldout = new();
-    foldout.text = "name";
-    foldoutNames.Add(foldout.name);
-    namesListView.itemsSource = foldoutNames;
-    //namesListView.bindItem
-    root.Add(namesListView);
-    
+  public void PassVisualElement(VisualElement ve)
+  {
+    highestTree = ve.Q<Label>("HighestTreeLabel");
+  }
 
+  public void DisplayCharacterSets(DialogContainer dc)
+  {
+    highestTree.text = dc.Character;
+
+  }
+}
+
+public static class DialogContainerLoader
+{
+  public static Dictionary<string, List<Dialog.DialogContainer>> GetDialogContainers()
+  {
+    JsonLoader.LoadAssetsFromJson();
+    return DialogList.CharacterDictionary;
   }
 }

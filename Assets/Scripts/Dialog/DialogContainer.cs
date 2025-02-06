@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Dialog
 {
   [System.Serializable]

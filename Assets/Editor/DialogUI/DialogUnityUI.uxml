@@ -1,3 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" label="Dropdown" editor-extension-mode="False">
-    <ui:ListView name="DataContainerUXML" />
-</ui:UXML>
