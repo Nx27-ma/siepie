@@ -6,11 +6,11 @@ public class Tempentry : MonoBehaviour
 {
     void Start()
     {
-   // JsonLoader.WriteUpdateToJson();
-    }
+    Dialog.JsonLoader.WriteUpdateToJson();
+  }
 
-    // Update is called once per frame
-    void Update()
+  // Update is called once per frame
+  void Update()
     {
         
     }

@@ -20,7 +20,7 @@ namespace Dialog
       {
         CurrentDialogData.Add(JsonUtility.FromJson<DialogContainer>(dialog.text));
       }
-      AddToCharacterDict(CurrentDialogData);
+      UpdateCharacterDict(CurrentDialogData);
 
       foreach (string key in CharacterDictionary.Keys)
       {
@@ -37,28 +37,23 @@ namespace Dialog
       List<string> fileNamesWithoutExtension = new();
 
       pathToJsonFiles = Application.dataPath;
-      directory = new DirectoryInfo(pathToJsonFiles);
+      directory = new DirectoryInfo(pathToJsonFiles);  //NOT HOW TO SOLVE IT
 
       LoadAssetsFromJson(); //Making sure that its the most up to date version in case the file has been edited by hand
-      AddToCharacterDict(NewlyAddedDialogData);
+      UpdateCharacterDict(NewlyAddedDialogData);
 
-      fileInfos = directory.GetFiles("*.json", SearchOption.AllDirectories);
-
+      fileInfos = directory.GetFiles("*.json", SearchOption.AllDirectories); //Gets all fileinfo from the character jsons
+      
       foreach (FileInfo info in fileInfos)
       {
-        fileNamesWithoutExtension.Add(Path.GetFileNameWithoutExtension(info.FullName));
-      }
-
-      foreach (string key in CharacterDictionary.Keys)
-      {
-        if (fileNamesWithoutExtension.Contains(key))
+        if(File.Exists(info.FullName))
         {
-
+          Debug.Log($"File exists moving on {info.FullName}");
         }
       }
     }
 
-    static void AddToCharacterDict(List<DialogContainer> dialog)
+    static void UpdateCharacterDict(List<DialogContainer> dialog)
     {
       foreach (DialogContainer dialogContainer in dialog)
       {
