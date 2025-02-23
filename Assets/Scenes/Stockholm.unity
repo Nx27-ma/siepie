@@ -1436,11 +1436,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Size.y
-      value: 0.23372942
+      value: 0.09737956
       objectReference: {fileID: 0}
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_Offset.y
-      value: -0.10313529
+      value: -0.17131022
       objectReference: {fileID: 0}
     - target: {fileID: 3408337425288184044, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -1496,7 +1496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Gamepad
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -12795,6 +12795,10 @@ PrefabInstance:
     - target: {fileID: 6503701709789304845, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673268558335542715, guid: c330db86572f42f4caa3b2c217128898, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 8075710103860502860, guid: c330db86572f42f4caa3b2c217128898, type: 3}
       propertyPath: m_LocalPosition.x
