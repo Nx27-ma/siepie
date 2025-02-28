@@ -6,16 +6,10 @@ using System.Linq;
 
 namespace Dialog
 {
-  public class DialogString : ScriptableObject, IDialog
+  public class DialogString : ScriptableObject
   {
     static SortedList<int, DialogContainer> orderedDialogList;
-    public static void OrderDialogContainers(List<DialogContainer> dialogContainers)
-    {
-      foreach (DialogContainer dialogContainer in dialogContainers)
-      {
-        orderedDialogList.Add(dialogContainer.Sequence, dialogContainer);
-      }
-    }
+   
     public static List<string> GetAllStrings()
     {
       return orderedDialogList.Values.Select(dialog => dialog.Dialog).ToList();

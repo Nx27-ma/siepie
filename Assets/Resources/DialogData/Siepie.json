@@ -1,6 +1,13 @@
 {
-  "UID": "0",
-  "Sequence": "0",
-  "Character": "Siepie",
-  "Dialog": "And this the second"
+  "0" : {
+    "UID": "0",
+    "Character": "Siepie",
+    "Dialog": "And this the second"
+  },
+
+  "1": {
+    "UID": "1",
+    "Character": "Siepie",
+    "Dialog": "And this the second"
+  }
 }

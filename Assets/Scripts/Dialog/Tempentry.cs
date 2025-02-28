@@ -6,7 +6,7 @@ public class Tempentry : MonoBehaviour
 {
     void Start()
     {
-    Dialog.JsonLoader.WriteUpdateToJson();
+    Dialog.JsonLoader.LoadAssetsFromJson();
   }
 
   // Update is called once per frame

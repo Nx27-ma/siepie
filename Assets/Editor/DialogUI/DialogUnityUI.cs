@@ -46,9 +46,5 @@ public class CharacterListEditor
 
 public static class DialogContainerLoader
 {
-  public static Dictionary<string, List<Dialog.DialogContainer>> GetDialogContainers()
-  {
-    JsonLoader.LoadAssetsFromJson();
-    return DialogList.CharacterDictionary;
-  }
+
 }
