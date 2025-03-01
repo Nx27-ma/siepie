@@ -14,12 +14,16 @@ public class Talk : PlayerInteraction
         public static bool has = false;
         public static bool hasgiven = false;
     }
-
+   
     //GIVE ME A DIALOGUE SYSTEM NORA AND MY LIFE IS YOURS -Henry
     public override void PlayerInteracted(GameObject player, GameObject interactedObject)
     {
         if(interactedObject == this.gameObject)
         {
+            Inventory inventory = player.GetComponent<Inventory>();
+
+            Potato.has = inventory.HasItemID(1);
+
             if (player.CompareTag("Cat") && Potato.hasgiven == false)
             {
                 text.text = 
