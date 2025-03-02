@@ -41,6 +41,7 @@ public class Talk : PlayerInteraction
             {
                 text.text =("(Happy) SCRAAAAAW");
                 Potato.hasgiven = true;
+                inventory.RemoveItemByID(1);
             }
         }
     }

@@ -25,6 +25,7 @@ public class InteractablePickup : PlayerInteraction
             if (inventory != null)
             {
                 inventory.AddItem(newItem);
+                
             }
 
             this.gameObject.SetActive(false);
