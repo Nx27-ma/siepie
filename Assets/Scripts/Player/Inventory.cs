@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public void AddItem(Item item) // Use this if you want to add an item - David
     {
         itemList.Add(item);
-        Debug.Log($"Added { item.itemName}");
+        Debug.Log($"Added {item.amount} { item.itemName}");
     }
 
     public bool RemoveItemByID(int itemID) // Use this to remove an item

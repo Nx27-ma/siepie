@@ -8,12 +8,15 @@ public class Item
     public string itemName;
     public int itemID;
     public Sprite icon;
+    public int amount;
 
-    public Item(string name, int id, Sprite icon = null)
+    public Item(string name, int id, int amount, Sprite icon = null)
     {
         this.itemName = name;
         this.itemID = id;
+        this.amount = amount;
         this.icon = icon;
+        
         
     }
 }

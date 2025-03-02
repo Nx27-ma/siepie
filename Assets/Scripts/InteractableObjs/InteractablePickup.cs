@@ -18,7 +18,7 @@ public class InteractablePickup : PlayerInteraction
             
             
 
-            Item newItem = new Item("Potato",1,thisObjSprite.sprite);
+            Item newItem = new Item("Potato",1,1,thisObjSprite.sprite);
 
             Inventory inventory = player.GetComponent<Inventory>();
 
