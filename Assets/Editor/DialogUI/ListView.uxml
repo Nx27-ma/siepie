@@ -1,5 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" label="Dropdown" editor-extension-mode="False">
-    <ui:VisualElement name="VE" style="flex-grow: 1;">
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="HighestTreeLabel" />
-    </ui:VisualElement>
-</ui:UXML>
