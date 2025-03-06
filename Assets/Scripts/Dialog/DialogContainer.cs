@@ -11,7 +11,7 @@ namespace Dialog
   }
 
 
-  public class DialogContainer : ScriptableObject
+  public class DialogContainer
   {
     public int UID; //DialogSet identifier 
     public int Sequence;
