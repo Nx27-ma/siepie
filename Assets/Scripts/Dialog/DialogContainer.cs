@@ -3,14 +3,13 @@ using UnityEngine;
 
 namespace Dialog
 {
-  [CreateAssetMenu(fileName = "CharacterDialogContainer", menuName = "ScriptableObjects/DialogContainer", order = 1)]
-
-  public class CharacterDialogContainer : ScriptableObject
+  public class CharacterDialogContainer
   {
-    public List<DialogContainer> DialogContainerContainer;
+    public static List<DialogContainer> DialogContainerContainer { internal set; get; }
+    
   }
 
-
+  [System.Serializable]
   public class DialogContainer
   {
     public int UID; //DialogSet identifier 
@@ -20,5 +19,6 @@ namespace Dialog
     public AudioClip AudioClip;
     public float DialogSpeed;
     public float DialogSoundVolume;
+    public Sprite CharacterImage;
   }
 }

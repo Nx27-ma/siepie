@@ -2,7 +2,7 @@
     <ui:Foldout text="Foldout">
         <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterName" />
         <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="CharacterNameTextField" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterImages" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterImage" />
         <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterImagesButton" />
         <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterDialog" />
         <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="CharacterDialogTextField" />

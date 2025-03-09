@@ -1,12 +1,17 @@
 using Dialog;
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Newtonsoft.Json;
+using System.Linq;
+using Unity.VisualScripting;
 
 public class CharacterConstructorUI : EditorWindow
 {
-  [SerializeField] CharacterDialogContainer container;
+  [SerializeField] VisualTreeAsset VisualTreeAsset;
+  [SerializeField] List<DialogContainer> characterDialogContainer = new();
   VisualElement root;
   [MenuItem("Window/Character Constructor")]
   private static void MakeGUIAppear()
@@ -16,6 +21,7 @@ public class CharacterConstructorUI : EditorWindow
   void OnEnable()
   {
     root = rootVisualElement;
+    UIInitialize();
   }
 
   public void OnInspectorUpdate()
@@ -25,28 +31,34 @@ public class CharacterConstructorUI : EditorWindow
 
   void UIInitialize()
   {
+    root.Clear();
+    characterDialogContainer.Add(new DialogContainer() { Character = "sup" });
+    VisualElement characterUI = VisualTreeAsset.CloneTree();
+    characterUI.SetCharacterUI(characterDialogContainer[0]);
+    root.Add(VisualTreeAsset.CloneTree());
+    root[0].SetCharacterUI(characterDialogContainer[0]);
+    root.Add(characterUI);
   }
 }
 public static class CharacterConstructorUIHelper
 {
-  public static VisualElement BuildCharacterUI(this VisualElement view, string characterName)
+  public static void SetCharacterUI(this VisualElement view, DialogContainer dc) 
   {
-    view.Add(new Label("Character Name") { name = "CharacterName" });
-    view.Add(new TextField() { name = "CharacterNameTextField" });
-    view.Add(new Label("Character Images") { name = "CharacterImages" });
-    view.Add(new Button() { name = "CharacterImagesButton" });
-    view.Add(new Label("Character Dialog") { name = "CharacterDialog" });
-    view.Add(new TextField("CharacterDialogTextField"));
-    view.Add(new Label("Character Voice") { name = "CharacterVoice" });
-    view.Add(new Button() { name = "CharacterVoiceButton" });
-    view.Add(new Label("Character Dialog Speed") { name = "CharacterDialogSpeed" });
-    view.Add(new Slider(0.0f, 100f) { value = 0.0f, name = "CharacterDialogSpeedSlider" });
-    view.Add(new Label("Character Dialog Sound Volume") { name = "CharacterDialogSoundVolume" });
-    view.Add(new Slider(0.0f, 100f) { value = 0.0f, name = "CharacterDialogSoundVolumeSlider" });
-    view.Add(new Button() { name = "Save" });
-    Foldout foldout = new Foldout { text = characterName };
-    foldout.Add(view);
-    return foldout;
+    Foldout characterNameVar = view.GetChildElementByName("CharacterName") as Foldout;
+    characterNameVar.text = dc.Character ??= "";
+    Foldout characterImagesVar = view.GetChildElementByName("CharacterImage") as Foldout;
+    characterImagesVar.text = dc.CharacterImage.name ??= "";
+    Foldout characterDialogText = view.GetChildElementByName("CharacterDialog") as Foldout;
+    characterDialogText.text = dc.Dialog ??= "";
+    Foldout characterVoice = view.GetChildElementByName("CharacterVoice") as Foldout;
+    characterVoice.text = dc.AudioClip.name ??= "";
   }
 
+
+  static VisualElement GetChildElementByName(this VisualElement view, string name)
+  {
+    VisualElement queryReq = view.Query<VisualElement>(name).First();
+    if (queryReq == null) { Debug.LogError($"No element found with the name \"{name}\""); };
+    return queryReq;
+  }
 }

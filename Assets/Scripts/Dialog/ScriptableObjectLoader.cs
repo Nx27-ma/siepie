@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static Dialog.CharacterDialogContainer;
 
 namespace Dialog
 {
-  public static class ScriptableObjectLoader
+  public static class JsonObjectLoader
   {
-    static List<CharacterDialogContainer> DialogFromJson = new();
-    static CharacterDialogContainer[] dialogContainers;
-
+    static List<DialogContainer> DialogFromJson = new();
+    static TextAsset[] JsonFiles;
     public static void LoadCharacters()
     {
-      dialogContainers = Resources.LoadAll<CharacterDialogContainer>("DialogData/Characters");
+      JsonFiles = Resources.LoadAll<TextAsset>("DialogData/Characters");
       DialogFromJson.Clear();
-      foreach (CharacterDialogContainer dialogContainer in dialogContainers)
+      foreach (DialogContainer dialogContainer in DialogContainerContainer)
       {
         DialogFromJson.Add(dialogContainer);
-        Debug.Log("DialogContainer: " + dialogContainer.name);
+        Debug.Log("DialogContainer: " + dialogContainer.Character);
       }
     }
   }
