@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Tempentry : MonoBehaviour
 {
-    void Start()
-    {
-
+  void Start()
+  {
+    Dialog.JsonObjectLoader.LoadCharacters();
   }
 
   // Update is called once per frame
   void Update()
-    {
-        
-    }
+  {
+
+  }
 }
