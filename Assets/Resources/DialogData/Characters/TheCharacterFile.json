@@ -1,0 +1,24 @@
+{
+    "Siepie" : [
+    {
+        "UID" : "0",
+        "Sequence" : "1",
+        "Character" : "Siepie",
+        "Dialog" : "DialogText",
+        "AudioClip" : "PathToDialog/",
+        "DialogSpeed" : "1",
+        "DialogVolume" : "34",
+        "CharacterImage" : "path/to/characterimages"
+    },
+    {
+        "UID" : "0",
+        "Sequence" : "1",
+        "Character" : "Siepie",
+        "Dialog" : "DialogText",
+        "AudioClip" : "PathToDialog/",
+        "DialogSpeed" : "1",
+        "DialogVolume" : "34",
+        "CharacterImage" : "path/to/characterimages"
+    }
+    ]
+}
