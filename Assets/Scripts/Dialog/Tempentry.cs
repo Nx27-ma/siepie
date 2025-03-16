@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
 public class Tempentry : MonoBehaviour
 {
   void Start()
   {
-    Dialog.JsonObjectLoader.LoadCharacters();
+    string path = "DialogData/Characters/TheCharacterFile";
+    print(path.CutPath("DialogData", false));
   }
 
-  // Update is called once per frame
   void Update()
   {
 

@@ -1,25 +1,24 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Dialog
 {
 
   public class CharacterDialogContainer
   {
-    public static List<DialogContainer> DialogContainerContainer;
+    public static List<DialogContainer> DialogContainerContainer = new();
 
   }
 
   [System.Serializable]
   public class DialogContainer
   {
-    public int UID; //DialogSet identifier 
-    public int Sequence;
+    public byte UID; //DialogSet identifier 
+    public byte Sequence;
     public string Character;
     public string Dialog;
     public string AudioClip;
-    public float DialogSpeed;
-    public float DialogSoundVolume;
+    public byte DialogSpeed;
+    public byte DialogSoundVolume;
     public string CharacterImage;
   }
 }

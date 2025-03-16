@@ -1,4 +1,0 @@
-Name:
-	>UID
-		-Seq: DialogString
-		-Seq: DialogString
