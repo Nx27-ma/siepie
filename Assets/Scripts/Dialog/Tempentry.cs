@@ -9,6 +9,7 @@ public class Tempentry : MonoBehaviour
   {
     string path = "DialogData/Characters/TheCharacterFile";
     print(path.CutPath("DialogData", false));
+    Dialog.JsonObjectLoader.SerializeCharacters(new Dialog.DialogContainer[0]);
   }
 
   void Update()

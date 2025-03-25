@@ -1,21 +1,24 @@
 using Dialog;
-using static Dialog.CharacterDialogContainer;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class CharacterConstructorUI : EditorWindow
 {
-  [SerializeField] VisualTreeAsset VisualTreeAsset;
-  VisualElement root;
+  [SerializeField] VisualTreeAsset UIDSorted;
+  [SerializeField] VisualTreeAsset CharacterSorted;
+  [SerializeField] VisualTreeAsset SortingChoice;
+
+  static DialogContainer[] DialogContainers;
+
   [MenuItem("Window/Character Constructor")]
   private static void MakeGUIAppear()
   {
     GetWindow<CharacterConstructorUI>("Character Dialog");
+    DialogContainers = Dialog.JsonObjectLoader.LoadCharacters();
   }
   void OnEnable()
   {
-    root = rootVisualElement;
     UIInitialize();
   }
 
@@ -26,14 +29,29 @@ public class CharacterConstructorUI : EditorWindow
 
   void UIInitialize()
   {
-    root.Clear();
-    DialogContainerContainer.Add(new DialogContainer() { Character = "sup" });
-    VisualElement characterUI = VisualTreeAsset.CloneTree();
-    characterUI.SetCharacterUI(DialogContainerContainer[0]);
-    root.Add(VisualTreeAsset.CloneTree());
-    root[0].SetCharacterUI(DialogContainerContainer[0]);
-    root.Add(characterUI);
+    rootVisualElement.Clear();
+    rootVisualElement.Add(SortingChoice.CloneTree());
+
+    foreach (var dc in DialogContainers)
+    {
+      var character = CharacterSorted.CloneTree();
+      rootVisualElement.Add(character);
+      character.SetCharacterUI(dc);
+    }
   }
+
+  class WrappedDialogContainer
+  {
+    WrappedDialogContainer(DialogContainer dc, VisualElement ve)
+    {
+      DialogContainer = dc;
+      VisualElement = ve;
+      VisualElement.SetCharacterUI(dc);
+    }
+    DialogContainer DialogContainer;
+    VisualElement VisualElement;
+  }
+
 }
 public static class CharacterConstructorUIHelper
 {
@@ -57,3 +75,4 @@ public static class CharacterConstructorUIHelper
     return queryReq;
   }
 }
+

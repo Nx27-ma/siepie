@@ -8,22 +8,17 @@ namespace Dialog
   public static class JsonObjectLoader
   {
     static TextAsset JsonFile;
-    public static List<DialogContainer> LoadCharacters()
+    public static DialogContainer[] LoadCharacters()
     {
-      List<DialogContainer> DialogFromJson = new();
       JsonFile = Resources.Load<TextAsset>("DialogData/Characters/TheCharacterFile");
 
       if (JsonFile == null) Debug.LogError("No JSON file found in DialogData/Characters");
 
-      DialogFromJson.Clear();
+      var dialogContainers = JsonConvert.DeserializeObject<DialogContainer[]>(JsonFile.text);
 
-      var dialogContainer = JsonConvert.DeserializeObject<DialogContainer[]>(JsonFile.text);
+      Debug.Log($"DialogContainers in {dialogContainers}: " + dialogContainers.Length);
 
-      DialogFromJson.AddRange(dialogContainer);
-
-      Debug.Log($"DialogContainers in {DialogFromJson}: " + dialogContainer.Length);
-
-      return DialogFromJson;
+      return dialogContainers;
     }
 
     public static void SerializeCharacters(DialogContainer[] dcs)
