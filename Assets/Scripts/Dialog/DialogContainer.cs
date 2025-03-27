@@ -16,6 +16,7 @@ namespace Dialog
     public byte Sequence;
     public string Character;
     public string Dialog;
+    public string DialogBox;
     public string AudioClip;
     public byte DialogSpeed;
     public byte DialogSoundVolume;

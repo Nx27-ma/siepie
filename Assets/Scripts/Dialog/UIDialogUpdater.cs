@@ -1,30 +1,39 @@
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Dialog
+namespace Dialog.Game
 {
   public class UIDialogUpdater : MonoBehaviour
   {
     public UIDocument uiDocument;
-    private Label characterLabel;
-    private Label dialogLabel;
-    private Image characterImage;
+    Label characterName;
+    Label dialogText;
+    VisualElement characterImage;
 
     void Start()
     {
       var root = uiDocument.rootVisualElement;
-      characterLabel = root.Q<Label>("CharacterLabel");
-      dialogLabel = root.Q<Label>("DialogLabel");
-      characterImage = root.Q<Image>("CharacterImage");
+      characterName = root.Query<Label>("CharacterName");
+      dialogText = root.Query<Label>("DialogText");
+      characterImage = root.Query<VisualElement>("CharacterImage");
     }
 
     public void UpdateDialog(DialogContainer dialogContainer)
     {
-      characterLabel.text = dialogContainer.Character;
-      dialogLabel.text = dialogContainer.Dialog;
+      characterName.text = dialogContainer.Character;
+      dialogText.text = dialogContainer.Dialog;
+      if (dialogContainer.Character != "Siepie" && dialogContainer.Character != "Takkie")
+      {
+        dialogText.style.backgroundImage = new StyleBackground(Resources.Load<Sprite>(dialogContainer.CharacterImage));
+      }
+      else
+      {
+        dialogText.style.backgroundImage = new StyleBackground(Resources.Load<Sprite>(dialogContainer.DialogBox));
+      }
 
-      // Assuming you have a method to load a sprite from a resource path
-      Sprite sprite = Resources.Load<Sprite>(dialogContainer.CharacterImage);
+
+        characterImage.style.backgroundImage = new StyleBackground(Resources.Load<Sprite>(dialogContainer.DialogBox));
     }
   }
 }
