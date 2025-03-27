@@ -1,14 +1,7 @@
 using System.Collections.Generic;
 
 namespace Dialog
-{
-
-  public class CharacterDialogContainer
-  {
-    public static List<DialogContainer> DialogContainerContainer = new();
-
-  }
-
+{ 
   [System.Serializable]
   public class DialogContainer
   {
