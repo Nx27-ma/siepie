@@ -1,17 +1,23 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Foldout text="Foldout">
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterName" />
-        <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="CharacterNameTextField" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterImage" />
-        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterImagesButton" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterDialog" />
-        <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="CharacterDialogTextField" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterVoice" />
-        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterVoiceButton" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterDialogSpeed" />
-        <ui:SliderInt label="SliderInt" high-value="100" name="CharacterDialogSpeedSlider" />
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterDialogSoundVolume" />
-        <ui:SliderInt label="SliderInt" high-value="100" name="CharacterDialogSoundVolumeSlider" />
+    <ui:Foldout text="Foldout" name="CharacterName">
+        <ui:UnsignedIntegerField label="UID" name="UID" />
+        <ui:UnsignedIntegerField label="Sequence" name="Sequence" />
+        <ui:TextField picking-mode="Ignore" label="Dialog text" value="nothingness is scary" multiline="true" name="Dialog" />
+        <ui:VisualElement name="FileExplorer" style="flex-grow: 1;">
+            <ui:VisualElement style="flex-grow: 1; flex-wrap: nowrap; flex-direction: row; align-items: center; justify-content: space-between;">
+                <ui:Label tabindex="-1" text="Audio clip" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AudioClip" style="align-self: auto;" />
+                <ui:Button text="Open" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-self: auto; width: 50%; height: 100%; margin-left: 4px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Path/" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ShowPath" />
+        </ui:VisualElement>
+        <ui:SliderInt label="Dialog playback speed" high-value="100" show-input-field="true" direction="Horizontal" name="DialogSpeed" />
+        <ui:SliderInt label="Dialog volume" high-value="100" show-input-field="true" direction="Horizontal" name="DialogSoundVolume" />
+        <ui:VisualElement name="FileExplorer" style="flex-grow: 1;">
+            <ui:VisualElement style="flex-grow: 1; flex-wrap: nowrap; flex-direction: row; align-items: center; justify-content: space-between;">
+                <ui:Label tabindex="-1" text="Image" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterImage" style="align-self: auto;" />
+                <ui:Button text="Open" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-self: auto; width: 50%; height: 100%; margin-left: 4px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Path/" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ShowPath" />
+        </ui:VisualElement>
     </ui:Foldout>
-    <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
 </ui:UXML>

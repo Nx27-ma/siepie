@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "UID": 1,
+    "Sequence": 1,
+    "Character": "John",
+    "Dialog": "Hello there!",
+    "DialogBox": "Standard",
+    "AudioClip": "greeting_clip",
+    "DialogSpeed": 5,
+    "DialogSoundVolume": 7,
+    "CharacterImage": "john_image"
+  },
+  {
+    "UID": 2,
+    "Sequence": 2,
+    "Character": "Alice",
+    "Dialog": "How are you?",
+    "DialogBox": "Standard",
+    "AudioClip": "question_clip",
+    "DialogSpeed": 6,
+    "DialogSoundVolume": 8,
+    "CharacterImage": "alice_image"
+  },
+  {
+    "UID": 3,
+    "Sequence": 3,
+    "Character": "John",
+    "Dialog": "I'm doing great, thanks!",
+    "DialogBox": "Standard",
+    "AudioClip": "response_clip",
+    "DialogSpeed": 5,
+    "DialogSoundVolume": 7,
+    "CharacterImage": "john_image"
+  },
+  {
+    "UID": 4,
+    "Sequence": 4,
+    "Character": "Alice",
+    "Dialog": "What about you?",
+    "DialogBox": "Standard",
+    "AudioClip": "followup_clip",
+    "DialogSpeed": 6,
+    "DialogSoundVolume": 8,
+    "CharacterImage": "alice_image"
+  },
+  {
+    "UID": 5,
+    "Sequence": 5,
+    "Character": "John",
+    "Dialog": "I'm just enjoying the day.",
+    "DialogBox": "Standard",
+    "AudioClip": "casual_clip",
+    "DialogSpeed": 5,
+    "DialogSoundVolume": 7,
+    "CharacterImage": "john_image"
+  },
+  {
+    "UID": 6,
+    "Sequence": 6,
+    "Character": "Alice",
+    "Dialog": "That's great to hear!",
+    "DialogBox": "Standard",
+    "AudioClip": "happy_clip",
+    "DialogSpeed": 6,
+    "DialogSoundVolume": 8,
+    "CharacterImage": "alice_image"
+  },
+  {
+    "UID": 7,
+    "Sequence": 7,
+    "Character": "John",
+    "Dialog": "What are your plans for today?",
+    "DialogBox": "Standard",
+    "AudioClip": "question_clip",
+    "DialogSpeed": 5,
+    "DialogSoundVolume": 7,
+    "CharacterImage": "john_image"
+  },
+  {
+    "UID": 8,
+    "Sequence": 8,
+    "Character": "Alice",
+    "Dialog": "I might go for a walk.",
+    "DialogBox": "Standard",
+    "AudioClip": "idea_clip",
+    "DialogSpeed": 6,
+    "DialogSoundVolume": 8,
+    "CharacterImage": "alice_image"
+  }
+]
