@@ -4,8 +4,9 @@ using UnityEngine;
 
 namespace Dialog.Game
 {
-  public class NpcDialogSequence : MonoBehaviour
+  public class DialogInit : MonoBehaviour
   {
-    internal int sequenceNumber;
+    [SerializeField] internal int sequenceNumber;
+
   }
 }

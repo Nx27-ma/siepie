@@ -1,10 +1,12 @@
 using UnityEngine;
+using Dialog.Game;
+
 
 namespace Player.Interaction
 {
+  [RequireComponent(typeof(DialogInit))]
   public class NpcInteract : MonoBehaviour, IInteractable
   {
-    // Start is called before the first frame update
     void Start()
     {
       SubscribeToInteractEvent();
@@ -12,7 +14,10 @@ namespace Player.Interaction
 
     public void PlayerInteracted(GameObject player, GameObject interactedObject)
     {
-      throw new System.NotImplementedException();
+      if (player.CompareTag("Human"))
+      {
+
+      }
     }
 
     public void SubscribeToInteractEvent()

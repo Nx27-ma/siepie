@@ -11,7 +11,7 @@ namespace Utils {
       if (index != -1)
       {
         string newPath = thisString.Substring(index);
-        Debug.Log(newPath);
+
         if (!inclTargetFolder)
         {
           newPath = newPath.Replace(targetFolder + "/", string.Empty);

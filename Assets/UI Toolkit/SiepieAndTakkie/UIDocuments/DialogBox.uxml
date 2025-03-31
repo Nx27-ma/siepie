@@ -1,8 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Body" style="flex-grow: 1; align-items: flex-end; justify-content: center; width: 100%; height: 100%;">
-        <ui:VisualElement name="Wrap" style="flex-grow: 1; width: 80%; margin-bottom: 3%; margin-right: auto; margin-left: auto;">
-            <ui:VisualElement name="Expression" style="flex-grow: 1; -unity-background-scale-mode: scale-to-fit;" />
-            <ui:VisualElement name="Dialog" style="flex-grow: 1;" />
+    <Style src="project://database/Assets/UI%20Toolkit/SiepieAndTakkie/USS/DialogAspect.uss?fileID=7433441132597879392&amp;guid=5e71ff6e99f73fe45b19341876220543&amp;type=3#DialogAspect" />
+    <ui:VisualElement name="Dialog" style="flex-grow: 0; height: initial; background-image: none; -unity-background-scale-mode: scale-to-fit;">
+        <ui:VisualElement name="CharacterNameBackground" style="flex-grow: 1; height: 10%;">
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CharacterName" style="-unity-text-align: upper-left; height: 10%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="DialogTextBackground" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Level/UI/TextBox.png?fileID=2800000&amp;guid=c17e8e829a30cd64a8ccdcaad07c0003&amp;type=3#TextBox&quot;);">
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DialogText" style="background-image: none; height: 100%;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

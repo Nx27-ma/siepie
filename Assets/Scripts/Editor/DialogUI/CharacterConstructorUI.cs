@@ -59,7 +59,7 @@ public class CharacterConstructorUI : EditorWindow
     dialogScrollView.style.flexBasis = new StyleLength(new Length(90, LengthUnit.Percent));
   }
 
-  public void OnInspectorUpdate()
+  void OnInspectorUpdate()
   {
     Repaint();
   }
@@ -98,26 +98,4 @@ public class CharacterConstructorUI : EditorWindow
   }
 }
 
-public static class CharacterConstructorUIHelper
-{
-  public static void SetCharacterUI(this VisualElement view, DialogContainer dc)
-  {
-    Foldout characterNameVar = view.GetChildElementByName("CharacterName") as Foldout;
-    characterNameVar.text = dc.Character ??= "";
-    Foldout characterImagesVar = view.GetChildElementByName("CharacterImage") as Foldout;
-    characterImagesVar.text = dc.CharacterImage ??= "";
-    Foldout characterDialogText = view.GetChildElementByName("CharacterDialog") as Foldout;
-    characterDialogText.text = dc.Dialog ??= "";
-    Foldout characterVoice = view.GetChildElementByName("CharacterVoice") as Foldout;
-    characterVoice.text = dc.AudioClip ??= "";
-  }
-
-  static VisualElement GetChildElementByName(this VisualElement view, string name)
-  {
-    VisualElement queryReq = view.Query<VisualElement>(name).First();
-    if (queryReq == null) { Debug.LogError($"No element found with the name \"{name}\""); }
-    ;
-    return queryReq;
-  }
-}
 
