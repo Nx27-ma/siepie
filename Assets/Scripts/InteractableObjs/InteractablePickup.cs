@@ -28,10 +28,12 @@ namespace Player.Interaction
     {
       if (interactedObject == this.gameObject)
       {
-        player.GetComponent<Inventory>().AddItem(this);
-        gameObject.SetActive(false);
-        PlayerInteractor.PlayerInteract -= PlayerInteracted;
-      }   
+                player.GetComponent<Inventory>().AddItem(this);
+                gameObject.SetActive(false);
+                PlayerInteractor.PlayerInteract -= PlayerInteracted;
+                Debug.Log($" {player.name} got {interactedObject.name}");
+            }
+            
     }
   }
 }
