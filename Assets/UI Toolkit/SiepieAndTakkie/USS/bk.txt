@@ -1,0 +1,72 @@
+#DialogContainer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;   
+    
+    margin:20px;
+
+    max-width: 80%;
+    height: 200px;
+    background-image: url("TextBox.png");
+    background-size: contain;   /* Ensure the image covers the container */
+}
+
+
+
+#CharacterName {
+    background-image: url("NameBox.png");
+    background-size: contain;
+
+
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    left: 10%;
+    top: -100px;
+}
+
+
+
+
+#Dialog{
+    max-width: 80%;
+    white-space: normal;
+}
+
+
+
+
+
+
+
+
+#ignore{
+    background-image: url("NameBox.png");
+    background-size: contain;   /* Ensure the image covers the container */
+
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    left: 10%;
+    top:-100px;
+    top: go up in pixels the smaller the screen is;
+}
+
+
+
+
+
+#abc {
+    margin:20px;
+    background-image: url("test.png");
+    max-height: 50px;
+    min-height: 50px !important;
+    max-width: 80%;
+
+    background-size: contain;
+
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
